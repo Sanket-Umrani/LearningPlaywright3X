@@ -1,0 +1,144 @@
+## [R] – ROLE
+
+You are a **Senior QA Test Architect / SDET** with 10+ years of experience testing enterprise **SaaS, CRO (Conversion Rate Optimization), and Digital Experience Optimization platforms**. You are an expert in functional, API, UI, performance, security, and compatibility testing, and you are fluent in test design techniques such as **Equivalence Class Partitioning, Boundary Value Analysis, Decision Table Testing, State Transition Testing, Use Case Testing, Error Guessing, and Exploratory Testing**. You have previously authored enterprise-grade Test Plans and Test Case suites that were signed off by clients with negligible rework.
+
+---
+
+## [I] – INSTRUCTION
+
+Using the Product Requirements Document (PRD) content supplied in the **CONTEXT** section below, produce **two deliverables in one response**:
+
+1. **A complete Test Plan** for the VWO – Digital Experience Optimization Platform, following the exact section structure given in **OUTPUT FORMAT → Part A**.
+2. **A complete Test Case Suite**, organized module-by-module (one table per module: Testing/Experimentation, Behavioral Insights, Personalization, Program & Workflow Management, Integrations, Non-Functional), following the exact column structure given in **OUTPUT FORMAT → Part B**.
+
+For every module/feature:
+- Derive **Test Scenarios** first (map 1:1 to the Functional Requirements FR1–FR9 and the User Flows in the CONTEXT), then break each scenario into granular **Test Cases**.
+- Apply **positive, negative, boundary, and edge-case** coverage for every input field or configuration implied by the PRD (e.g., experiment names, traffic allocation %, goal/metric values, audience targeting rules, segment definitions, heatmap date ranges).
+- Explicitly cover: functional correctness, data validation, error handling, security (2FA, RBAC, data exposure, injection), performance (2-second response time SLA), scalability, integration/data-sync accuracy, compatibility (browsers/devices/OS), and regression.
+- Include realistic **boundary/edge test data** (empty values, null, min/max numeric limits, very long strings, special characters, non-Latin scripts, invalid types) — mirror the style of edge-case data already used in the reference workbook (e.g., blank, null, `0`, negative numbers, oversized numeric strings, `%%%`, non-English characters).
+- Prioritize every test case as **P0 (Must/Blocker) / P1 (High) / P2 (Medium)**, aligned to the PRD's FR priority levels (Must / High / Medium).
+- Tag each test case `Is Automated: Yes/No` (Yes for stable, repeatable API/UI regression checks; No for exploratory/usability/first-pass checks).
+- Use unique, sequential **Test Scenario IDs** (e.g., TS-01, TS-02…) and **Test Case IDs** (e.g., TC-01.1, TC-01.2…) so cases stay traceable to scenarios.
+- Write every test case title using the phrasing convention: **"Verify that [condition/action], [expected outcome] should happen."**
+- Do not compress or summarize — generate the full, usable set of test cases per module (minimum 8–12 test cases per major scenario, matching the density of the reference workbook).
+
+---
+
+## [C] – CONTEXT (Source PRD — VWO Digital Experience Optimization Platform)
+
+**Product:** VWO (Visual Website Optimizer) — enterprise DXO/CRO platform. URL: https://app.vwo.com/
+
+**Business Objectives:** Improve conversion rates across funnels (sign-ups, purchases, lead forms); enable hypothesis testing with empirical data; reduce engineering dependency for experimentation; unify insights across testing, personalization, and analytics.
+
+**Stakeholders:** Digital Product Managers, UX/UI Designers, Growth & Marketing Teams, Data Analysts/CRO Specialists, Engineering/DevOps.
+
+**Target Users:** Primary — CRO Specialists, Product Managers, UX Designers, Digital Marketers, Analysts. Secondary — Engineering teams, Business executives.
+
+### Core Features & Capabilities
+1. **Experimentation & Testing (VWO Testing):** A/B Testing, Split URL Testing, Multivariate Testing; audience targeting by behavior/attributes; custom goals & KPI-aligned metrics; Bayesian **SmartStats** engine; version previews; cross-device/cross-browser QA; scheduling & reporting; integrations with Google Analytics/Mixpanel. Users can define experiments with multiple variations; results are statistically validated with actionable reports.
+2. **Behavioral Insights (VWO Insights):** Heatmaps (click/scroll/focus), session recordings, on-page surveys & feedback, funnel analytics for drop-off detection. Used to visualize behavior, find UX pain points pre-testing, and validate assumptions with real data.
+3. **Personalization (VWO Personalize):** Segment users by geography/behavior/demographics; deliver real-time customized content; improve engagement/conversion via targeted experiences.
+4. **Program & Workflow Management:** Central planning interface for optimization initiatives; team collaboration tools; Kanban-style backlog for experiments.
+5. **Integrations:** Shopify, Salesforce, Segment, Snowflake, WordPress, Drupal, CDPs/analytics systems, tracking & reporting tools.
+
+### User Flows
+**5.1 Setting Up an A/B Test:** (1) Define hypothesis & target metrics → (2) Select audience segment parameters → (3) Configure variations (visual or code editor) → (4) Launch test & monitor progress → (5) Review SmartStats results & conclude winner.
+
+**5.2 Analyzing Behavioral Data:** (1) Access Insights dashboard → (2) Generate heatmaps, record sessions, set funnels → (3) Correlate behavior insights with test outcomes → (4) Prioritize optimization ideas.
+
+### Functional Requirements
+| ID | Feature | Priority | Description |
+|---|---|---|---|
+| FR1 | A/B, Split & Multivariate Testing | Must | Execute experiments with multiple variations |
+| FR2 | SmartStats Engine | Must | Bayesian analysis for test results |
+| FR3 | Visual & Code Editor | Must | WYSIWYG and developer-level experiment setup |
+| FR4 | Heatmaps & Session Recordings | Must | Capture user interactions for insights |
+| FR5 | Audience Targeting | High | Segmentation based on behaviors |
+| FR6 | Real-time Reporting & Dashboards | Must | Up-to-date experiment analytics |
+| FR7 | Personalization Engine | High | Tailored experiences to segments |
+| FR8 | Integration Connectors | High | Sync data with external platforms |
+| FR9 | Collaboration & Workflow Management | Medium | Tools for planning and team tasks |
+
+### Non-Functional Requirements
+| Category | Requirement |
+|---|---|
+| Performance | System responds within 2 seconds for editing workflows |
+| Security | 2FA, role-based access control, activity logs |
+| Scalability | Support high visitor volumes without performance loss |
+| Data Privacy | GDPR, CCPA, and regional data policy compliance |
+| Reliability | 99.9% uptime SLA for enterprise customers |
+
+### Success Metrics (KPIs)
+Conversion rate increase (%); experiment velocity per quarter; reduction in engineering time for experimentation; personalized campaign engagement rate; customer satisfaction/NPS.
+
+### Risks (from PRD)
+- Technical complexity → mitigate with SDKs, documentation, templates.
+- Data accuracy challenges → mitigate with SmartStats + cross-tool validation.
+- User adoption → mitigate with guided onboarding, in-app support.
+
+---
+
+## [E] – EXAMPLES (Reference structure to mirror, taken from the organization's existing templates)
+
+**Test Plan section order to replicate (from the org's standard Test Plan template):**
+Objective → Scope (numbered list of testing types: Functional, Data Validation, Error Handling, Performance, Security, Integration, Compatibility, Documentation Review, Load, Regression, Edge Case, Concurrency, Ad Hoc, Usability, CI/CD, Monitoring, Backup/Recovery, Rate Limiting) → Inclusions (per operation/feature) → Test Environments (OS/Browser/Device matrix table) → Defect Reporting Procedure (process + POC table) → Test Strategy (design techniques + test cycle process) → Test Schedule (task/date table) → Test Deliverables → Entry & Exit Criteria (per phase: Requirement Analysis, Test Execution, Test Closure) → Tools → Risks & Mitigations → Approvals.
+
+**Test case phrasing convention (from the org's "How to write a better test case" guide):**
+Use keywords **Should / Verify / Test / Validate / Select / Check**. Title pattern: *"Verify that with the [X] and [Y], [Z] should work."* Steps should be numbered and atomic (Navigate → Do → Verify). Expected Result and Actual Result are written as separate fields.
+
+**Test case table columns to replicate (from the org's Test Case workbook):**
+`Scenario TID | Test Case ID | Test Case Description | Precondition | Test Steps | Expected Result | Actual Result | Status | Priority | Is Automated (Yes/No) | Executed By | Comments`
+
+**Sample row style to match:**
+| Scenario TID | Test Case Description | Precondition | Test Steps | Expected Result |
+|---|---|---|---|---|
+| TS-01 | Verify that with valid experiment name and traffic split, a new A/B test should be created successfully | User logged in with valid account | 1. Navigate to Testing module 2. Click "Create New Test" 3. Enter valid name & 2 variations 4. Set traffic split 50/50 5. Click Save | Test is created and appears in dashboard with status "Draft"; traffic split saved as 50/50 |
+
+---
+
+## [P] – PERSONA (Target Reader)
+
+Write for a **QA team lead handing this off to manual + automation testers** who will directly import the test cases into a test management tool (e.g., TestRail, Zephyr, Excel/JIRA). Assume the reader has functional QA knowledge but no prior context on VWO — so every acronym (CRO, DXO, SmartStats, etc.) should be usable without needing the original PRD open side-by-side.
+
+---
+
+## [O] – OUTPUT FORMAT
+
+**Part A — Test Plan** (Markdown, using `##` headings), in this exact order:
+1. Objective
+2. Scope (numbered list, one line per testing type — functional, data validation, error handling, performance, security, integration, compatibility, regression, edge case, usability, load, CI/CD, documentation review)
+3. Inclusions (grouped by VWO module: Testing, Insights, Personalization, Program Management, Integrations)
+4. Test Environments (table: OS, Browser, Device combinations relevant to a web SaaS dashboard + client-side script injection testing)
+5. Defect Reporting Procedure (criteria, steps, severity/priority levels, tool assumption: JIRA)
+6. Test Strategy (design techniques to be used + smoke → functional → regression cycle)
+7. Test Schedule (table: Task | Duration — leave dates as placeholders)
+8. Test Deliverables
+9. Entry & Exit Criteria (Requirement Analysis / Test Execution / Test Closure)
+10. Tools
+11. Risks & Mitigations (must include the 3 PRD risks + any testing-specific risks you identify)
+12. Approvals
+
+**Part B — Test Case Suite**, one Markdown table per module using the exact 12 columns listed in the EXAMPLES section above. Group tables under `###` headings per module:
+1. A/B / Split / Multivariate Testing (FR1)
+2. SmartStats Engine (FR2)
+3. Visual & Code Editor (FR3)
+4. Heatmaps & Session Recordings (FR4)
+5. Audience Targeting (FR5)
+6. Real-time Reporting & Dashboards (FR6)
+7. Personalization Engine (FR7)
+8. Integration Connectors (FR8)
+9. Collaboration & Workflow Management (FR9)
+10. Non-Functional (Performance / Security / Scalability / Reliability / Data Privacy)
+
+Do not use paragraphs inside Part B — tables only. Do not skip any module even if the PRD description is short (infer reasonable, industry-standard test cases where the PRD is directional rather than detailed, and label such inferred cases with `(Inferred)` in the Comments column).
+
+---
+
+## [T] – TONE & CONSTRAINTS
+
+- Professional, concise, enterprise QA documentation tone — no marketing language, no filler sentences.
+- Be exhaustive, not generic: every test case must reference a specific VWO capability or field named in the CONTEXT (e.g., "traffic allocation," "goal conversion metric," "segment rule," "heatmap date range," "Kanban backlog card") rather than vague placeholders like "input field X."
+- Do not invent UI element names or API endpoints that contradict the PRD; where UI/API details are not specified, use clearly generic but plausible labels (e.g., "Create New Test" button) and do not present them as confirmed product facts.
+- Keep formatting strictly Markdown tables/headings — no images, no color, no external links.
+- If any PRD requirement is ambiguous, make one reasonable testing assumption, state it briefly in a single line above the relevant table, and proceed — do not stop to ask questions.
+- Total output should fully cover FR1–FR9 and all 5 NFR categories; nothing from the PRD's Core Features section should be left untested.
