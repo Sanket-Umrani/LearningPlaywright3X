@@ -1,7 +1,8 @@
-LearnPlaywright3x — JavaScript Fundamentals & Automation Learning Repo
+LearnPlaywright3x — 
+JavaScript Fundamentals & Automation Learning Repo
 A learning repository tracking JavaScript fundamentals from first principles, alongside RICE-prompt notes for automation framework generation and a growing IQ_Notes reference library (interview-style concept explainers).
 
-Table of Contents
+Table of Contents.
 Repo Structure
 00 — GenAI / RICE Prompting
 01 — Hello World
