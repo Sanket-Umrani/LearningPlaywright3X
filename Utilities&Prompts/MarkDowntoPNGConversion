@@ -1,0 +1,18 @@
+Shortcut commands for future rendering
+1. Install once
+python -m pip install markdown
+2. Render any markdown file
+python Utilities&Prompts/render_md_table_to_png.py InterviewQuestion_Notes/YourFile.md
+3. If python is not on PATH
+```bash
+C:/Users/Sanket/AppData/Local/Programs/Python/Python314/python.exe Utilities&Prompts/render_md_table_to_png.py InterviewQuestion_Notes/YourFile.md
+```
+4. PowerShell alias for faster reuse
+```powershell
+function md2png { & 'C:/Users/Sanket/AppData/Local/Programs/Python/Python314/python.exe' 'C:/Users/Sanket/VSCodeProjects/LearningPlaywright3X/Utilities&Prompts/render_md_table_to_png.py' @args }
+# then run:
+# md2png InterviewQuestion_Notes/YourFile.md
+```
+Result
+This creates InterviewQuestion_Notes/YourFile.png
+It preserves the original .md file and saves the rendered image next to it
