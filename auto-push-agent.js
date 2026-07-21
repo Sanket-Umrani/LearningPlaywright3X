@@ -204,7 +204,10 @@ function pushChanges() {
     input: msg,
   });
 
-  // 4. Push
+  // 4. Pull rebase to catch remote changes
+  run("git pull --rebase");
+
+  // 5. Push
   const pushResult = run("git push");
 
   if (
