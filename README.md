@@ -217,6 +217,196 @@ Full identifier rules + naming convention tables live in `InterviewQuestion_Note
 <!-- AUTO_FILE_TABLE:Chapter_04_Literals -->
 | # | File | Covers |
 |---|------|--------|
+| 07 | `07_Literals.js` | Numric Literal - Numeric |
+| 08 | `08_Null_Undefined.js` | null vs undefined in JavaScript |
+| 09 | `09_Null_InterviewQuestion.js` | let no_audi_pramod_sir_has = null |
+| 10 | `10_Literals.js` | typeof operator |
+| 11 | `11_NumberPart1.js` | All Number Types in JavaScript |
+| 12 | `12_NumberPart2.js` | let million = 1_000_000 |
+<!-- /AUTO_FILE_TABLE -->
+
+**Q&A — why use this?**
+
+- **Q:** Can an identifier start with a digit? **A:** No — `let 1stPlace` throws `SyntaxError: Invalid or unexpected token`.
+- **Q:** Can Unicode be used in identifiers? **A:** Yes — `let café` and `let 变量` are both valid; so are `\uXXXX` escape sequences.
+- **Q:** What's the difference between `/* */` and `/** */` comments? **A:** Both are multi-line block comments to the engine; `/** */` is the JSDoc convention used by tooling (IDEs, doc generators) to extract structured documentation.
+
+Full identifier rules + naming convention tables live in `InterviewQuestion_Notes/`.
+
+---
+
+## Chapter 04 — Literals & Numbers
+
+**Concept:** A literal is a fixed value written directly in source code (`42`, `"hi"`, `true`, `null`). This chapter covers every literal type, `typeof` behavior, `null` vs `undefined`, and every JS number format (decimal, binary, octal, hex, exponential, separators, BigInt, Infinity/NaN).
+
+**Why:** JS has exactly one number type (IEEE 754 double) for everything except BigInt — no `int`/`float`/`double` split like Java or C. Knowing the literal forms and quirks (`typeof null === "object"`, `NaN !== NaN`) prevents subtle bugs.
+
+**Files:**
+
+<!-- AUTO_FILE_TABLE:Chapter_04_Literals -->
+| # | File | Covers |
+|---|------|--------|
+| 07 | `07_Literals.js` | String, boolean, numeric, null literals + `typeof` |
+| 08 | `08_Null_Undefined.js` | `null` vs `undefined` — meaning, who sets it, `typeof`, `==`/`===` comparison |
+| 09 | `09_Null_InterviewQuestion.js` | One-liner: `let no_audi_pramod_sir_has = null;` |
+| 10 | `10_Literals.js` | Decimal, hex, octal, exponential number literals |
+| 11 | `11_NumberPart1.js` | Integer/binary/octal/hex, floating-point, exponential notation |
+| 12 | `12_NumberPart2.js` | Numeric separators (ES2021+), BigInt, Infinity, NaN |
+<!-- /AUTO_FILE_TABLE -->
+
+**Q&A — why use this?**
+
+- **Q:** Why does `typeof null` return `"object"`? **A:** A long-standing JS bug from the original 1995 implementation, kept for backward compatibility.
+- **Q:** What's the real difference between `null` and `undefined`? **A:** `undefined` means "not assigned yet" (JS sets it automatically); `null` means "intentionally empty" (a developer sets it explicitly).
+- **Q:** When do you need BigInt? **A:** When an integer exceeds `Number.MAX_SAFE_INTEGER` (2^53 - 1) and precision matters — append `n` to the literal or call `BigInt(...)`.
+
+---
+
+## Chapter 05 — Operators
+
+**Concept:** JavaScript operators — assignment, arithmetic, comparison, logical, string, ternary, and `typeof`. Includes deep dives into type coercion gotchas with `==` vs `===`.
+
+**Why:** Operators are how programs compute, decide, and transform data. The loose equality (`==`) coercion rules are a common source of bugs — understanding them is essential before writing test assertions or conditional logic.
+
+**Files:**
+
+<!-- AUTO_FILE_TABLE:Chapter_05_Operators -->
+| # | File | Covers |
+|---|------|--------|
+| 13 | `13_DataType.js` | Data Type in the JS |
+| 14 | `14_AssignmentOperators.js` | Assignment Operators |
+| 15 | `15_Arithmatic_Operators.js` | +,-,*, /, |
+| 16 | `16_Comparison_Operators.js` | Compasion Operator (will always result in the boolean, true or false) |
+| 17 | `17_Logical_Operators.js` | && -> AND Gate |
+| 18 | `18_ConfusingComparisons_P1.js` | Rule of thumb: |
+| 18 | `18_ConfusingComparisons_P2.js` | Rule of thumb: |
+| 19 | `19_Questions.js` | console.log(5!==="5"); //this will throw an error because !=== is not a valid operator in JavaScript |
+| 20 | `20_String_Operator.js` | typeof operator |
+| 21 | `21_Ternary_Operator.js` | ## Ternary (Conditional) Operator |
+| 22 | `22_InterviewQuestions.js` | loose vs strict equality operators (== |
+| 23 | `23_InterviewQuestions.js` | loose vs strict equality operators (== |
+| 24 | `24_InterviewQuestions.js` | ternary conditional operator |
+| 25 | `25_InterviewQuestions.js` | Using Template Literal |
+| 26 | `26_InterviewQuestions.js` | ternary conditional operator |
+| 27 | `27_NestedTernaryOperator.js` | Condition 1: logic is age>18 he will go goa other wise not |
+| 28 | `28_InterviewQuestions.js` | ternary conditional operator |
+| 29 | `29_InterviewQuestions.js` | ternary conditional operator |
+| 30 | `30_TypeOfOperators.js` | typeof true is boolean |
+| 31 | `31_PrePostIncrement.js` | Pre Increment |
+| 32 | `32_PreIncrePostIncreConcat.js` | let a=10; |
+| 33 | `33_PreIncreAddLiteralValue.js` | let a=10 // |
+| 34 | `34_IncreDecreImportantQuestions.js` | let a = 100; |
+| 35 | `35_null_coalescing_operator.js` | ternary conditional operator |
+<!-- /AUTO_FILE_TABLE -->
+
+**Q&A — why use this?**
+
+- **Q:** Can an identifier start with a digit? **A:** No — `let 1stPlace` throws `SyntaxError: Invalid or unexpected token`.
+- **Q:** Can Unicode be used in identifiers? **A:** Yes — `let café` and `let 变量` are both valid; so are `\uXXXX` escape sequences.
+- **Q:** What's the difference between `/* */` and `/** */` comments? **A:** Both are multi-line block comments to the engine; `/** */` is the JSDoc convention used by tooling (IDEs, doc generators) to extract structured documentation.
+
+Full identifier rules + naming convention tables live in `InterviewQuestion_Notes/`.
+
+---
+
+## Chapter 04 — Literals & Numbers
+
+**Concept:** A literal is a fixed value written directly in source code (`42`, `"hi"`, `true`, `null`). This chapter covers every literal type, `typeof` behavior, `null` vs `undefined`, and every JS number format (decimal, binary, octal, hex, exponential, separators, BigInt, Infinity/NaN).
+
+**Why:** JS has exactly one number type (IEEE 754 double) for everything except BigInt — no `int`/`float`/`double` split like Java or C. Knowing the literal forms and quirks (`typeof null === "object"`, `NaN !== NaN`) prevents subtle bugs.
+
+**Files:**
+
+<!-- AUTO_FILE_TABLE:Chapter_04_Literals -->
+| # | File | Covers |
+|---|------|--------|
+| 07 | `07_Literals.js` | Numric Literal - Numeric |
+| 08 | `08_Null_Undefined.js` | null vs undefined in JavaScript |
+| 09 | `09_Null_InterviewQuestion.js` | let no_audi_pramod_sir_has = null |
+| 10 | `10_Literals.js` | typeof operator |
+| 11 | `11_NumberPart1.js` | All Number Types in JavaScript |
+| 12 | `12_NumberPart2.js` | let million = 1_000_000 |
+<!-- /AUTO_FILE_TABLE -->
+
+**Q&A — why use this?**
+
+- **Q:** Can an identifier start with a digit? **A:** No — `let 1stPlace` throws `SyntaxError: Invalid or unexpected token`.
+- **Q:** Can Unicode be used in identifiers? **A:** Yes — `let café` and `let 变量` are both valid; so are `\uXXXX` escape sequences.
+- **Q:** What's the difference between `/* */` and `/** */` comments? **A:** Both are multi-line block comments to the engine; `/** */` is the JSDoc convention used by tooling (IDEs, doc generators) to extract structured documentation.
+
+Full identifier rules + naming convention tables live in `InterviewQuestion_Notes/`.
+
+---
+
+## Chapter 04 — Literals & Numbers
+
+**Concept:** A literal is a fixed value written directly in source code (`42`, `"hi"`, `true`, `null`). This chapter covers every literal type, `typeof` behavior, `null` vs `undefined`, and every JS number format (decimal, binary, octal, hex, exponential, separators, BigInt, Infinity/NaN).
+
+**Why:** JS has exactly one number type (IEEE 754 double) for everything except BigInt — no `int`/`float`/`double` split like Java or C. Knowing the literal forms and quirks (`typeof null === "object"`, `NaN !== NaN`) prevents subtle bugs.
+
+**Files:**
+
+<!-- AUTO_FILE_TABLE:Chapter_04_Literals -->
+| # | File | Covers |
+|---|------|--------|
+| 07 | `07_Literals.js` | Numric Literal - Numeric |
+| 08 | `08_Null_Undefined.js` | null vs undefined in JavaScript |
+| 09 | `09_Null_InterviewQuestion.js` | let no_audi_pramod_sir_has = null |
+| 10 | `10_Literals.js` | typeof operator |
+| 11 | `11_NumberPart1.js` | All Number Types in JavaScript |
+| 12 | `12_NumberPart2.js` | let million = 1_000_000 |
+<!-- /AUTO_FILE_TABLE -->
+
+**Q&A — why use this?**
+
+- **Q:** Can an identifier start with a digit? **A:** No — `let 1stPlace` throws `SyntaxError: Invalid or unexpected token`.
+- **Q:** Can Unicode be used in identifiers? **A:** Yes — `let café` and `let 变量` are both valid; so are `\uXXXX` escape sequences.
+- **Q:** What's the difference between `/* */` and `/** */` comments? **A:** Both are multi-line block comments to the engine; `/** */` is the JSDoc convention used by tooling (IDEs, doc generators) to extract structured documentation.
+
+Full identifier rules + naming convention tables live in `InterviewQuestion_Notes/`.
+
+---
+
+## Chapter 04 — Literals & Numbers
+
+**Concept:** A literal is a fixed value written directly in source code (`42`, `"hi"`, `true`, `null`). This chapter covers every literal type, `typeof` behavior, `null` vs `undefined`, and every JS number format (decimal, binary, octal, hex, exponential, separators, BigInt, Infinity/NaN).
+
+**Why:** JS has exactly one number type (IEEE 754 double) for everything except BigInt — no `int`/`float`/`double` split like Java or C. Knowing the literal forms and quirks (`typeof null === "object"`, `NaN !== NaN`) prevents subtle bugs.
+
+**Files:**
+
+<!-- AUTO_FILE_TABLE:Chapter_04_Literals -->
+| # | File | Covers |
+|---|------|--------|
+| 07 | `07_Literals.js` | Numric Literal - Numeric |
+| 08 | `08_Null_Undefined.js` | null vs undefined in JavaScript |
+| 09 | `09_Null_InterviewQuestion.js` | let no_audi_pramod_sir_has = null |
+| 10 | `10_Literals.js` | typeof operator |
+| 11 | `11_NumberPart1.js` | All Number Types in JavaScript |
+| 12 | `12_NumberPart2.js` | let million = 1_000_000 |
+<!-- /AUTO_FILE_TABLE -->
+
+**Q&A — why use this?**
+
+- **Q:** Can an identifier start with a digit? **A:** No — `let 1stPlace` throws `SyntaxError: Invalid or unexpected token`.
+- **Q:** Can Unicode be used in identifiers? **A:** Yes — `let café` and `let 变量` are both valid; so are `\uXXXX` escape sequences.
+- **Q:** What's the difference between `/* */` and `/** */` comments? **A:** Both are multi-line block comments to the engine; `/** */` is the JSDoc convention used by tooling (IDEs, doc generators) to extract structured documentation.
+
+Full identifier rules + naming convention tables live in `InterviewQuestion_Notes/`.
+
+---
+
+## Chapter 04 — Literals & Numbers
+
+**Concept:** A literal is a fixed value written directly in source code (`42`, `"hi"`, `true`, `null`). This chapter covers every literal type, `typeof` behavior, `null` vs `undefined`, and every JS number format (decimal, binary, octal, hex, exponential, separators, BigInt, Infinity/NaN).
+
+**Why:** JS has exactly one number type (IEEE 754 double) for everything except BigInt — no `int`/`float`/`double` split like Java or C. Knowing the literal forms and quirks (`typeof null === "object"`, `NaN !== NaN`) prevents subtle bugs.
+
+**Files:**
+
+<!-- AUTO_FILE_TABLE:Chapter_04_Literals -->
+| # | File | Covers |
+|---|------|--------|
 | 07 | `07_Literals.js` | String, boolean, numeric, null literals + `typeof` |
 | 08 | `08_Null_Undefined.js` | `null` vs `undefined` — meaning, who sets it, `typeof`, `==`/`===` comparison |
 | 09 | `09_Null_InterviewQuestion.js` | One-liner: `let no_audi_pramod_sir_has = null;` |
