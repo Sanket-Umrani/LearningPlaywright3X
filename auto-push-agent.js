@@ -4,7 +4,7 @@ const fs = require("fs");
 const os = require("os");
 
 const repoPath = __dirname;
-const POLL_INTERVAL_MS = 30_000;
+const POLL_INTERVAL_MS = 60_000;
 const COOLDOWN_MS = 10_000;
 const README_PATH = path.join(repoPath, "README.md");
 
@@ -216,8 +216,24 @@ function pushChanges() {
     pushResult.includes("Everything up-to-date")
   ) {
     console.log(`[${ts}] Pushed ${changed} file(s) successfully.`);
+    resetIdleTimer();
   } else {
     console.log(`[${ts}] Push result:\n${pushResult}`);
+  }
+}
+
+// ── Idle auto-shutdown ───────────────────────────────────────────────────────
+
+let lastPushTime = Date.now();
+
+function resetIdleTimer() {
+  lastPushTime = Date.now();
+}
+
+function checkIdleTimeout() {
+  if (Date.now() - lastPushTime >= 60_000 && !hasChanges()) {
+    console.log(`[${timestamp()}] No changes for 60s — shutting down.`);
+    process.exit(0);
   }
 }
 
@@ -225,7 +241,10 @@ function pushChanges() {
 
 function tick() {
   if (onCooldown) return;
-  if (!hasChanges()) return;
+  if (!hasChanges()) {
+    checkIdleTimeout();
+    return;
+  }
 
   const ts = timestamp();
   console.log(`[${ts}] Changes detected. Updating README and pushing...`);
