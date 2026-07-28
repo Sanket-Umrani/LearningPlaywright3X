@@ -1,7 +1,8 @@
 {
   "scripts": {
     "generate:arrays-png": "python InterviewQuestion_Notes/render_arrays_functions_png.py",
-    "generate:png": "python InterviewQuestion_Notes/render_arrays_functions_png.py"
+    "generate:png": "python InterviewQuestion_Notes/render_arrays_functions_png.py",
+    "concept:analysis": "node scripts/concept-analysis.js"
   },
   "dependencies": {
     "prompt-sync": "^4.2.0"
