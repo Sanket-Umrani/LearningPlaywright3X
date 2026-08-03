@@ -5,7 +5,44 @@ const path = require('path');
 
 const repoRoot = path.resolve(__dirname, '..');
 const notesDir = path.join(repoRoot, 'InterviewQuestion_Notes');
-const outputPath = path.join(notesDir, 'ConceptAnalysis_Untracked_Notes.md');
+const legacyOutputName = 'ConceptAnalysis_Untracked_Notes.md';
+
+function sanitizeFileName(name) {
+  return name
+    .replace(/\\/g, '/')
+    .replace(/[<>:"|?*]/g, '')
+    .replace(/\s+/g, '_')
+    .replace(/^\.+/, '')
+    .trim();
+}
+
+function getOutputFileName(files) {
+  if (!files.length) {
+    return 'Untracked_JavaScript_Concept_Analysis.md';
+  }
+
+  const directories = files
+    .map((file) => path.posix.dirname(file).replace(/\\/g, '/'))
+    .filter(Boolean);
+
+  if (directories.length && directories.every((dir) => dir === directories[0])) {
+    const folderName = path.basename(directories[0] || 'Untracked_JavaScript_Concept_Analysis');
+    return `${sanitizeFileName(folderName) || 'Untracked_JavaScript_Concept_Analysis'}.md`;
+  }
+
+  const counts = {};
+  directories.forEach((dir) => {
+    const key = path.posix.basename(dir) || 'Untracked_JavaScript_Concept_Analysis';
+    counts[key] = (counts[key] || 0) + 1;
+  });
+
+  const mostCommon = Object.entries(counts).sort((a, b) => b[1] - a[1])[0];
+  if (mostCommon) {
+    return `${sanitizeFileName(mostCommon[0]) || 'Untracked_JavaScript_Concept_Analysis'}.md`;
+  }
+
+  return 'Untracked_JavaScript_Concept_Analysis.md';
+}
 
 function runGit(args) {
   return execFileSync('git', args, { cwd: repoRoot, encoding: 'utf8' }).trim();
@@ -154,6 +191,14 @@ function main() {
     .split('\n')
     .map((line) => line.trim())
     .filter(Boolean);
+
+  const outputFileName = getOutputFileName(files);
+  const outputPath = path.join(notesDir, outputFileName);
+  const legacyOutputPath = path.join(notesDir, legacyOutputName);
+
+  if (fs.existsSync(legacyOutputPath) && legacyOutputPath !== outputPath) {
+    fs.unlinkSync(legacyOutputPath);
+  }
 
   const markdown = buildMarkdown(files);
   fs.writeFileSync(outputPath, markdown, 'utf8');

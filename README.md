@@ -107,9 +107,24 @@ LearnPlaywright3x/
 │   ├── 77_ArrayChecking.js
 │   ├── 78_ShallowDeepCopy.js
 │   ├── 79_Destructuring.js
+├── Chapter_11_Functions/
+│   ├── 80_Fn.js
+│   ├── 81_Fn.js
+│   ├── 82_Type1_BasicFn.js
+│   ├── 83_Type2_BasicsFn.js
+│   ├── 84_Type3_BasicsFn.js
+│   ├── 85_Type4_BasicFn.js
+│   ├── 86_TemplateLiteral.js
+│   ├── 87_ExpressionFunction.js
+│   ├── 88_ArrowFn.js
+│   ├── 89_ArrowFn.js
+│   ├── 90_RealTimeArrowFnUse.js
+│   ├── 91_IIFE.js
 ├── PracticePrograms/
 │   ├── Filter_Sort_Array.js
+│   ├── FindDuplicateElements.js
 │   ├── FindMaximumArray.js
+│   ├── FrequencyOfEachElement.js
 │   ├── HelloWorld.js
 │   ├── TakeInputFromUsers.js
 │   ├── TriangleClassifier.js
@@ -254,12 +269,31 @@ This section is generated from the current JavaScript files in the workspace. Ru
 - 78_ShallowDeepCopy.js — Array utility and transformation examples
 - 79_Destructuring.js — Array destructuring and rest syntax
 
+## Chapter 11 — Functions
+
+### Files covered
+
+- 80_Fn.js — Basic console output example
+- 81_Fn.js — Basic console output example
+- 82_Type1_BasicFn.js — Array validation and predicate checks
+- 83_Type2_BasicsFn.js — Looping and iteration examples
+- 84_Type3_BasicsFn.js — Basic console output example
+- 85_Type4_BasicFn.js — Basic console output example
+- 86_TemplateLiteral.js — Basic console output example
+- 87_ExpressionFunction.js — Basic console output example
+- 88_ArrowFn.js — Basic console output example
+- 89_ArrowFn.js — Looping and iteration examples
+- 90_RealTimeArrowFnUse.js — Basic console output example
+- 91_IIFE.js — Looping and iteration examples
+
 ## Practice Programs
 
 ### Files covered
 
 - Filter_Sort_Array.js — Array utility and transformation examples
+- FindDuplicateElements.js — Conditional branching examples
 - FindMaximumArray.js — Looping and iteration examples
+- FrequencyOfEachElement.js — Array transformation with map() and filter()
 - HelloWorld.js — Basic console output example
 - TakeInputFromUsers.js — User input handling examples
 - TriangleClassifier.js — Conditional branching examples
