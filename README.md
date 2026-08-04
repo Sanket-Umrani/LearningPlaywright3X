@@ -108,6 +108,10 @@ LearnPlaywright3x/
 │   ├── 78_ShallowDeepCopy.js
 │   ├── 79_Destructuring.js
 ├── Chapter_11_Functions/
+│   ├── 100_TDZ.js
+│   ├── 101_IQ.js
+│   ├── 102_IQ.js
+│   ├── 103_IQ.js
 │   ├── 80_Fn.js
 │   ├── 81_Fn.js
 │   ├── 82_Type1_BasicFn.js
@@ -120,12 +124,22 @@ LearnPlaywright3x/
 │   ├── 89_ArrowFn.js
 │   ├── 90_RealTimeArrowFnUse.js
 │   ├── 91_IIFE.js
+│   ├── 92_SpreadFn.js
+│   ├── 93_ReturnFn.js
+│   ├── 94_VarLetConst1.js
+│   ├── 94_VarLetConst2.js
+│   ├── 95_Hoisting.js
+│   ├── 96_VarHoisting.js
+│   ├── 97_FunctionHoisting.js
+│   ├── 98_LetHoisting.js
+│   ├── 99_LetTDZ.js
 ├── PracticePrograms/
 │   ├── Filter_Sort_Array.js
 │   ├── FindDuplicateElements.js
 │   ├── FindMaximumArray.js
 │   ├── FrequencyOfEachElement.js
 │   ├── HelloWorld.js
+│   ├── Hoisting_TDZ_Sample.js
 │   ├── TakeInputFromUsers.js
 │   ├── TriangleClassifier.js
 ├── InterviewQuestion_Notes/
@@ -273,6 +287,10 @@ This section is generated from the current JavaScript files in the workspace. Ru
 
 ### Files covered
 
+- 100_TDZ.js — Basic console output example
+- 101_IQ.js — Basic console output example
+- 102_IQ.js — Basic console output example
+- 103_IQ.js — Basic console output example
 - 80_Fn.js — Basic console output example
 - 81_Fn.js — Basic console output example
 - 82_Type1_BasicFn.js — Array validation and predicate checks
@@ -285,6 +303,15 @@ This section is generated from the current JavaScript files in the workspace. Ru
 - 89_ArrowFn.js — Looping and iteration examples
 - 90_RealTimeArrowFnUse.js — Basic console output example
 - 91_IIFE.js — Looping and iteration examples
+- 92_SpreadFn.js — Array validation and predicate checks
+- 93_ReturnFn.js — Conditional branching examples
+- 94_VarLetConst1.js — Looping and iteration examples
+- 94_VarLetConst2.js — Basic console output example
+- 95_Hoisting.js — Looping and iteration examples
+- 96_VarHoisting.js — Basic console output example
+- 97_FunctionHoisting.js — Basic console output example
+- 98_LetHoisting.js — Basic console output example
+- 99_LetTDZ.js — Basic console output example
 
 ## Practice Programs
 
@@ -295,6 +322,7 @@ This section is generated from the current JavaScript files in the workspace. Ru
 - FindMaximumArray.js — Looping and iteration examples
 - FrequencyOfEachElement.js — Array transformation with map() and filter()
 - HelloWorld.js — Basic console output example
+- Hoisting_TDZ_Sample.js — Basic console output example
 - TakeInputFromUsers.js — User input handling examples
 - TriangleClassifier.js — Conditional branching examples
 

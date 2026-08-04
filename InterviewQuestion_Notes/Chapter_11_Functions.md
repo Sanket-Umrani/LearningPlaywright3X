@@ -2,14 +2,14 @@
 
 ## Summary
 
-This note was generated from the current untracked JavaScript files on 2026-08-03T15:05:49.408Z.
-Files analyzed: 12
+This note was generated from the current untracked JavaScript files on 2026-08-04T08:32:45.028Z.
+Files analyzed: 14
 
-## 80_Fn.js
+## 100_TDZ.js
 
 ### File
 
-- Chapter_11_Functions/80_Fn.js
+- Chapter_11_Functions/100_TDZ.js
 
 ### Core concept
 
@@ -24,11 +24,11 @@ Files analyzed: 12
 
 - This example is a practical reference for a common JavaScript coding pattern.
 
-## 81_Fn.js
+## 101_IQ.js
 
 ### File
 
-- Chapter_11_Functions/81_Fn.js
+- Chapter_11_Functions/101_IQ.js
 
 ### Core concept
 
@@ -43,11 +43,49 @@ Files analyzed: 12
 
 - This example is a practical reference for a common JavaScript coding pattern.
 
-## 82_Type1_BasicFn.js
+## 102_IQ.js
 
 ### File
 
-- Chapter_11_Functions/82_Type1_BasicFn.js
+- Chapter_11_Functions/102_IQ.js
+
+### Core concept
+
+- JavaScript practice concept
+
+### Key learnings
+
+- The file demonstrates a practical JavaScript pattern.
+- The example is useful for understanding everyday coding behavior.
+
+### Interview-style note
+
+- This example is a practical reference for a common JavaScript coding pattern.
+
+## 103_IQ.js
+
+### File
+
+- Chapter_11_Functions/103_IQ.js
+
+### Core concept
+
+- JavaScript practice concept
+
+### Key learnings
+
+- The file demonstrates a practical JavaScript pattern.
+- The example is useful for understanding everyday coding behavior.
+
+### Interview-style note
+
+- This example is a practical reference for a common JavaScript coding pattern.
+
+## 92_SpreadFn.js
+
+### File
+
+- Chapter_11_Functions/92_SpreadFn.js
 
 ### Core concept
 
@@ -62,11 +100,11 @@ Files analyzed: 12
 
 - Use every() for “all must pass” checks and some() for “at least one passes” checks.
 
-## 83_Type2_BasicsFn.js
+## 93_ReturnFn.js
 
 ### File
 
-- Chapter_11_Functions/83_Type2_BasicsFn.js
+- Chapter_11_Functions/93_ReturnFn.js
 
 ### Core concept
 
@@ -81,11 +119,11 @@ Files analyzed: 12
 
 - This example is a practical reference for a common JavaScript coding pattern.
 
-## 84_Type3_BasicsFn.js
+## 94_VarLetConst1.js
 
 ### File
 
-- Chapter_11_Functions/84_Type3_BasicsFn.js
+- Chapter_11_Functions/94_VarLetConst1.js
 
 ### Core concept
 
@@ -100,11 +138,11 @@ Files analyzed: 12
 
 - This example is a practical reference for a common JavaScript coding pattern.
 
-## 85_Type4_BasicFn.js
+## 94_VarLetConst2.js
 
 ### File
 
-- Chapter_11_Functions/85_Type4_BasicFn.js
+- Chapter_11_Functions/94_VarLetConst2.js
 
 ### Core concept
 
@@ -119,11 +157,11 @@ Files analyzed: 12
 
 - This example is a practical reference for a common JavaScript coding pattern.
 
-## 86_TemplateLiteral.js
+## 95_Hoisting.js
 
 ### File
 
-- Chapter_11_Functions/86_TemplateLiteral.js
+- Chapter_11_Functions/95_Hoisting.js
 
 ### Core concept
 
@@ -138,11 +176,11 @@ Files analyzed: 12
 
 - This example is a practical reference for a common JavaScript coding pattern.
 
-## 87_ExpressionFunction.js
+## 96_VarHoisting.js
 
 ### File
 
-- Chapter_11_Functions/87_ExpressionFunction.js
+- Chapter_11_Functions/96_VarHoisting.js
 
 ### Core concept
 
@@ -157,11 +195,11 @@ Files analyzed: 12
 
 - This example is a practical reference for a common JavaScript coding pattern.
 
-## 88_ArrowFn.js
+## 97_FunctionHoisting.js
 
 ### File
 
-- Chapter_11_Functions/88_ArrowFn.js
+- Chapter_11_Functions/97_FunctionHoisting.js
 
 ### Core concept
 
@@ -176,11 +214,11 @@ Files analyzed: 12
 
 - This example is a practical reference for a common JavaScript coding pattern.
 
-## 89_ArrowFn.js
+## 98_LetHoisting.js
 
 ### File
 
-- Chapter_11_Functions/89_ArrowFn.js
+- Chapter_11_Functions/98_LetHoisting.js
 
 ### Core concept
 
@@ -195,11 +233,11 @@ Files analyzed: 12
 
 - This example is a practical reference for a common JavaScript coding pattern.
 
-## 90_RealTimeArrowFnUse.js
+## 99_LetTDZ.js
 
 ### File
 
-- Chapter_11_Functions/90_RealTimeArrowFnUse.js
+- Chapter_11_Functions/99_LetTDZ.js
 
 ### Core concept
 
@@ -214,11 +252,11 @@ Files analyzed: 12
 
 - This example is a practical reference for a common JavaScript coding pattern.
 
-## 91_IIFE.js
+## Hoisting_TDZ_Sample.js
 
 ### File
 
-- Chapter_11_Functions/91_IIFE.js
+- PracticePrograms/Hoisting_TDZ_Sample.js
 
 ### Core concept
 
