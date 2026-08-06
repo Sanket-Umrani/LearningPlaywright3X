@@ -186,23 +186,50 @@ function buildMarkdown(files) {
 function main() {
   fs.mkdirSync(notesDir, { recursive: true });
 
-  const output = runGit(['ls-files', '--others', '--exclude-standard', '--', '*.js']);
-  const files = output
+  // List untracked JavaScript files recursively
+  const output = runGit(['ls-files', '--others', '--exclude-standard', '--', '**/*.js']);
+  let files = output
     .split('\n')
     .map((line) => line.trim())
     .filter(Boolean);
 
-  const outputFileName = getOutputFileName(files);
-  const outputPath = path.join(notesDir, outputFileName);
-  const legacyOutputPath = path.join(notesDir, legacyOutputName);
-
-  if (fs.existsSync(legacyOutputPath) && legacyOutputPath !== outputPath) {
-    fs.unlinkSync(legacyOutputPath);
+  // Only include files whose top-level folder starts with 'Chapter_'
+  if (files.length) {
+    files = files.filter((f) => {
+      const top = path.posix.dirname(f).replace(/\\/g, '/').split('/')[0] || '';
+      return top.startsWith('Chapter_');
+    });
   }
 
-  const markdown = buildMarkdown(files);
-  fs.writeFileSync(outputPath, markdown, 'utf8');
-  console.log(`Updated ${path.relative(repoRoot, outputPath)} with ${files.length} untracked JavaScript file(s).`);
+  if (!files.length) {
+    const outputPath = path.join(notesDir, 'Untracked_JavaScript_Concept_Analysis.md');
+    const markdown = buildMarkdown(files);
+    fs.writeFileSync(outputPath, markdown, 'utf8');
+    console.log(`Updated ${path.relative(repoRoot, outputPath)} with ${files.length} untracked JavaScript file(s).`);
+    return;
+  }
+
+  // Group files by directory and write one markdown per directory
+  const groups = {};
+  files.forEach((f) => {
+    const dir = path.posix.dirname(f).replace(/\\/g, '/') || '.';
+    groups[dir] = groups[dir] || [];
+    groups[dir].push(f);
+  });
+
+  Object.entries(groups).forEach(([dir, groupFiles]) => {
+    let outputFileName;
+    if (dir === '.' || dir === '') {
+      outputFileName = 'Untracked_JavaScript_Concept_Analysis.md';
+    } else {
+      outputFileName = `${sanitizeFileName(path.posix.basename(dir)) || 'Untracked_JavaScript_Concept_Analysis'}.md`;
+    }
+
+    const outputPath = path.join(notesDir, outputFileName);
+    const markdown = buildMarkdown(groupFiles);
+    fs.writeFileSync(outputPath, markdown, 'utf8');
+    console.log(`Updated ${path.relative(repoRoot, outputPath)} with ${groupFiles.length} untracked JavaScript file(s) from ${dir}.`);
+  });
 }
 
 main();
