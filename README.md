@@ -133,15 +133,30 @@ LearnPlaywright3x/
 │   ├── 97_FunctionHoisting.js
 │   ├── 98_LetHoisting.js
 │   ├── 99_LetTDZ.js
+│   ├── Default_ParamFn1.js
+│   ├── Default_ParamFn2.js
+│   ├── RestOfParamsFn.js
+├── Chapter_12_FunctionClosure/
+│   ├── 104_ScopeFn.js
+│   ├── 105_Closure.js
+│   ├── 106_Closure_Remembers.js
+│   ├── 107_Closure_RealTimeEx.js
+│   ├── 108_Simple_Fn.js
 ├── PracticePrograms/
-│   ├── Filter_Sort_Array.js
-│   ├── FindDuplicateElements.js
-│   ├── FindMaximumArray.js
-│   ├── FrequencyOfEachElement.js
-│   ├── HelloWorld.js
-│   ├── Hoisting_TDZ_Sample.js
-│   ├── TakeInputFromUsers.js
-│   ├── TriangleClassifier.js
+│   ├── 01_HelloWorld.js
+│   ├── 02_TakeInputFromUsers.js
+│   ├── 03_TablePrintUsingSystemOut.js
+│   ├── 04_FizzBuzz.js
+│   ├── 05_FindMaximumArray.js
+│   ├── 05_GradeCalculator.js
+│   ├── 06_FrequencyOfArrayElement.js
+│   ├── 06_LeapYearChecker.js
+│   ├── 07_TriangleClassifier.js
+│   ├── 08_Hoisting_TDZ_Sample.js
+│   ├── 08_SwapTwoNumbersWithoutThirdVariable.js
+│   ├── 09_Filter_Sort_Array.js
+│   ├── 10_FindDuplicateElements.js
+│   ├── 11_RateLimitingAPI.js
 ├── InterviewQuestion_Notes/
 ├── Utilities&Prompts/
 └── README.md
@@ -312,19 +327,38 @@ This section is generated from the current JavaScript files in the workspace. Ru
 - 97_FunctionHoisting.js — Basic console output example
 - 98_LetHoisting.js — Basic console output example
 - 99_LetTDZ.js — Basic console output example
+- Default_ParamFn1.js — Basic console output example
+- Default_ParamFn2.js — Basic console output example
+- RestOfParamsFn.js — Basic console output example
+
+## Chapter 12 — FunctionClosure
+
+### Files covered
+
+- 104_ScopeFn.js — Basic console output example
+- 105_Closure.js — Basic console output example
+- 106_Closure_Remembers.js — Basic console output example
+- 107_Closure_RealTimeEx.js — Looping and iteration examples
+- 108_Simple_Fn.js — Basic console output example
 
 ## Practice Programs
 
 ### Files covered
 
-- Filter_Sort_Array.js — Array utility and transformation examples
-- FindDuplicateElements.js — Conditional branching examples
-- FindMaximumArray.js — Looping and iteration examples
-- FrequencyOfEachElement.js — Array transformation with map() and filter()
-- HelloWorld.js — Basic console output example
-- Hoisting_TDZ_Sample.js — Basic console output example
-- TakeInputFromUsers.js — User input handling examples
-- TriangleClassifier.js — Conditional branching examples
+- 01_HelloWorld.js — Basic console output example
+- 02_TakeInputFromUsers.js — Looping and iteration examples
+- 03_TablePrintUsingSystemOut.js — Looping and iteration examples
+- 04_FizzBuzz.js — Conditional branching examples
+- 05_FindMaximumArray.js — Looping and iteration examples
+- 05_GradeCalculator.js — Conditional branching examples
+- 06_FrequencyOfArrayElement.js — Array transformation with map() and filter()
+- 06_LeapYearChecker.js — Conditional branching examples
+- 07_TriangleClassifier.js — Conditional branching examples
+- 08_Hoisting_TDZ_Sample.js — Basic console output example
+- 08_SwapTwoNumbersWithoutThirdVariable.js — Looping and iteration examples
+- 09_Filter_Sort_Array.js — Array utility and transformation examples
+- 10_FindDuplicateElements.js — Conditional branching examples
+- 11_RateLimitingAPI.js — Basic console output example
 
 ---
 

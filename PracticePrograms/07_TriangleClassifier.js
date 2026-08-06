@@ -1,27 +1,26 @@
 // Write a program that takes three sides of a triangle and classifies it as EQuilateral,Isosceles and Scalene traingle
-  
-const data = require('fs').readFileSync(0, 'utf8').trim();
-let sides = data.split(/\s+/);
 
-let side1 = Number(sides[0]);
-let side2 = Number(sides[1]);
-let side3 = Number(sides[2]);
+const prompt=require("prompt-sync")();
+let side1 = Number(prompt("Enter the first side of the triangle: "));
+let side2 = Number(prompt("Enter the second side of the triangle: "));
+let side3 = Number(prompt("Enter the third side of the triangle: "));
 
 if (side1 + side2 > side3 &&
     side1 + side3 > side2 &&
-    side2 + side3 > side1) {
-
+    side2 + side3 > side1) //Valid Triangle Condition checking
+    {
+        console .log("Valid Triangle");
     if (side1 === side2 && side2 === side3) {
         console.log("Equilateral");
     } else if (side1 === side2 || side2 === side3 || side1 === side3) {
         console.log("Isosceles");
-    } else {
+    } else if (side1 !== side2 && side2 !== side3 && side1 !== side3) {
         console.log("Scalene");
     }
-
-} else {
+ else {
     console.log("Invalid Triangle");
 }
+    }
 
 // const data = require('fs').readFileSync(0, 'utf8'). trim();
 // let sides = data.split(/\s+/);
