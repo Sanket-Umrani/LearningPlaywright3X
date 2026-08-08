@@ -142,6 +142,10 @@ LearnPlaywright3x/
 │   ├── 106_Closure_Remembers.js
 │   ├── 107_Closure_RealTimeEx.js
 │   ├── 108_Simple_Fn.js
+├── Chapter_13_Strings/
+│   ├── 109_Strings.js
+│   ├── 110_String_Functions.js
+│   ├── 111_String_Searching.js
 ├── PracticePrograms/
 │   ├── 01_HelloWorld.js
 │   ├── 02_TakeInputFromUsers.js
@@ -152,11 +156,13 @@ LearnPlaywright3x/
 │   ├── 06_FrequencyOfArrayElement.js
 │   ├── 06_LeapYearChecker.js
 │   ├── 07_TriangleClassifier.js
-│   ├── 08_Hoisting_TDZ_Sample.js
 │   ├── 08_SwapTwoNumbersWithoutThirdVariable.js
-│   ├── 09_Filter_Sort_Array.js
-│   ├── 10_FindDuplicateElements.js
-│   ├── 11_RateLimitingAPI.js
+│   ├── 09_RightTriangleStarPattern.js
+│   ├── 10_LeftTriangleStarPattern.js
+│   ├── 11_PyramidPattern.js
+│   ├── Filter_Sort_Array.js
+│   ├── FindDuplicateElements.js
+│   ├── RateLimitingAPI.js
 ├── InterviewQuestion_Notes/
 ├── Utilities&Prompts/
 └── README.md
@@ -341,6 +347,14 @@ This section is generated from the current JavaScript files in the workspace. Ru
 - 107_Closure_RealTimeEx.js — Looping and iteration examples
 - 108_Simple_Fn.js — Basic console output example
 
+## Chapter 13 — Strings
+
+### Files covered
+
+- 109_Strings.js — Looping and iteration examples
+- 110_String_Functions.js — Basic console output example
+- 111_String_Searching.js — Basic console output example
+
 ## Practice Programs
 
 ### Files covered
@@ -354,11 +368,13 @@ This section is generated from the current JavaScript files in the workspace. Ru
 - 06_FrequencyOfArrayElement.js — Array transformation with map() and filter()
 - 06_LeapYearChecker.js — Conditional branching examples
 - 07_TriangleClassifier.js — Conditional branching examples
-- 08_Hoisting_TDZ_Sample.js — Basic console output example
 - 08_SwapTwoNumbersWithoutThirdVariable.js — Looping and iteration examples
-- 09_Filter_Sort_Array.js — Array utility and transformation examples
-- 10_FindDuplicateElements.js — Conditional branching examples
-- 11_RateLimitingAPI.js — Basic console output example
+- 09_RightTriangleStarPattern.js — Looping and iteration examples
+- 10_LeftTriangleStarPattern.js — Looping and iteration examples
+- 11_PyramidPattern.js — JavaScript practice example
+- Filter_Sort_Array.js — Array utility and transformation examples
+- FindDuplicateElements.js — Conditional branching examples
+- RateLimitingAPI.js — Basic console output example
 
 ---
 

@@ -1,8 +1,8 @@
-# Untracked JavaScript Concept Analysis
+# Chapter_12_FunctionClosure - JavaScript Concept Analysis
 
 ## Summary
 
-This note was generated from the current untracked JavaScript files on 2026-08-06T08:08:37.100Z.
+This note summarizes the JavaScript files in Chapter_12_FunctionClosure on 2026-08-08T04:16:44.808Z.
 Files analyzed: 5
 
 ## 104_ScopeFn.js
@@ -13,16 +13,17 @@ Files analyzed: 5
 
 ### Core concept
 
-- JavaScript practice concept
+- Accessing characters and string properties
 
 ### Key learnings
 
-- The file demonstrates a practical JavaScript pattern.
-- The example is useful for understanding everyday coding behavior.
+- String length is zero-based for indexing, but the length property counts characters.
+- charAt() returns a character at a given index, while charCodeAt() returns its ASCII code.
+- The at() method supports negative indices, which makes it easier to access characters from the end.
 
 ### Interview-style note
 
-- This example is a practical reference for a common JavaScript coding pattern.
+- A strong interview answer is to remember that string indexing is zero-based, while length counts characters from 1 onward.
 
 ## 105_Closure.js
 
@@ -32,16 +33,17 @@ Files analyzed: 5
 
 ### Core concept
 
-- JavaScript practice concept
+- Accessing characters and string properties
 
 ### Key learnings
 
-- The file demonstrates a practical JavaScript pattern.
-- The example is useful for understanding everyday coding behavior.
+- String length is zero-based for indexing, but the length property counts characters.
+- charAt() returns a character at a given index, while charCodeAt() returns its ASCII code.
+- The at() method supports negative indices, which makes it easier to access characters from the end.
 
 ### Interview-style note
 
-- This example is a practical reference for a common JavaScript coding pattern.
+- A strong interview answer is to remember that string indexing is zero-based, while length counts characters from 1 onward.
 
 ## 106_Closure_Remembers.js
 
@@ -51,16 +53,17 @@ Files analyzed: 5
 
 ### Core concept
 
-- JavaScript practice concept
+- Accessing characters and string properties
 
 ### Key learnings
 
-- The file demonstrates a practical JavaScript pattern.
-- The example is useful for understanding everyday coding behavior.
+- String length is zero-based for indexing, but the length property counts characters.
+- charAt() returns a character at a given index, while charCodeAt() returns its ASCII code.
+- The at() method supports negative indices, which makes it easier to access characters from the end.
 
 ### Interview-style note
 
-- This example is a practical reference for a common JavaScript coding pattern.
+- A strong interview answer is to remember that string indexing is zero-based, while length counts characters from 1 onward.
 
 ## 107_Closure_RealTimeEx.js
 
@@ -70,16 +73,17 @@ Files analyzed: 5
 
 ### Core concept
 
-- JavaScript practice concept
+- Accessing characters and string properties
 
 ### Key learnings
 
-- The file demonstrates a practical JavaScript pattern.
-- The example is useful for understanding everyday coding behavior.
+- String length is zero-based for indexing, but the length property counts characters.
+- charAt() returns a character at a given index, while charCodeAt() returns its ASCII code.
+- The at() method supports negative indices, which makes it easier to access characters from the end.
 
 ### Interview-style note
 
-- This example is a practical reference for a common JavaScript coding pattern.
+- A strong interview answer is to remember that string indexing is zero-based, while length counts characters from 1 onward.
 
 ## 108_Simple_Fn.js
 
@@ -89,13 +93,14 @@ Files analyzed: 5
 
 ### Core concept
 
-- JavaScript practice concept
+- Accessing characters and string properties
 
 ### Key learnings
 
-- The file demonstrates a practical JavaScript pattern.
-- The example is useful for understanding everyday coding behavior.
+- String length is zero-based for indexing, but the length property counts characters.
+- charAt() returns a character at a given index, while charCodeAt() returns its ASCII code.
+- The at() method supports negative indices, which makes it easier to access characters from the end.
 
 ### Interview-style note
 
-- This example is a practical reference for a common JavaScript coding pattern.
+- A strong interview answer is to remember that string indexing is zero-based, while length counts characters from 1 onward.
