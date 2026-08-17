@@ -2,8 +2,8 @@
 
 ## Summary
 
-This note summarizes the JavaScript files in Chapter_13_Strings on 2026-08-08T04:16:44.821Z.
-Files analyzed: 3
+This note summarizes the JavaScript files in Chapter_13_Strings on 2026-08-17T11:15:23.438Z.
+Files analyzed: 7
 
 ## 109_Strings.js
 
@@ -25,11 +25,11 @@ Files analyzed: 3
 
 - Template literals are often preferred over manual string concatenation because they are more readable and support expressions.
 
-## 110_String_Functions.js
+## 110_String_FunctionsPart1.js
 
 ### File
 
-- Chapter_13_Strings/110_String_Functions.js
+- Chapter_13_Strings/110_String_FunctionsPart1.js
 
 ### Core concept
 
@@ -64,3 +64,82 @@ Files analyzed: 3
 ### Interview-style note
 
 - A common interview gotcha is that indexOf() returns -1 when the substring is missing, so always check for that value.
+
+## 112_SubStringExtraction.js
+
+### File
+
+- Chapter_13_Strings/112_SubStringExtraction.js
+
+### Core concept
+
+- Accessing characters and string properties
+
+### Key learnings
+
+- String length is zero-based for indexing, but the length property counts characters.
+- charAt() returns a character at a given index, while charCodeAt() returns its ASCII code.
+- The at() method supports negative indices, which makes it easier to access characters from the end.
+
+### Interview-style note
+
+- A strong interview answer is to remember that string indexing is zero-based, while length counts characters from 1 onward.
+
+## 113_String_FunctionsPart2.js
+
+### File
+
+- Chapter_13_Strings/113_String_FunctionsPart2.js
+
+### Core concept
+
+- Accessing characters and string properties
+
+### Key learnings
+
+- String length is zero-based for indexing, but the length property counts characters.
+- charAt() returns a character at a given index, while charCodeAt() returns its ASCII code.
+- The at() method supports negative indices, which makes it easier to access characters from the end.
+
+### Interview-style note
+
+- A strong interview answer is to remember that string indexing is zero-based, while length counts characters from 1 onward.
+
+## 114_StringFunctionsPart3.js
+
+### File
+
+- Chapter_13_Strings/114_StringFunctionsPart3.js
+
+### Core concept
+
+- Accessing characters and string properties
+
+### Key learnings
+
+- String length is zero-based for indexing, but the length property counts characters.
+- charAt() returns a character at a given index, while charCodeAt() returns its ASCII code.
+- The at() method supports negative indices, which makes it easier to access characters from the end.
+
+### Interview-style note
+
+- A strong interview answer is to remember that string indexing is zero-based, while length counts characters from 1 onward.
+
+## 115_StringConversions.js
+
+### File
+
+- Chapter_13_Strings/115_StringConversions.js
+
+### Core concept
+
+- Creating and converting strings
+
+### Key learnings
+
+- The file demonstrates a practical JavaScript concept.
+- The example is useful for interview revision because it highlights real-world language behavior.
+
+### Interview-style note
+
+- This example is a practical reference for a common JavaScript pattern.

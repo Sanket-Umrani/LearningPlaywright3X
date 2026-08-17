@@ -144,8 +144,19 @@ LearnPlaywright3x/
 │   ├── 108_Simple_Fn.js
 ├── Chapter_13_Strings/
 │   ├── 109_Strings.js
-│   ├── 110_String_Functions.js
+│   ├── 110_String_FunctionsPart1.js
 │   ├── 111_String_Searching.js
+│   ├── 112_SubStringExtraction.js
+│   ├── 113_String_FunctionsPart2.js
+│   ├── 114_StringFunctionsPart3.js
+│   ├── 115_StringConversions.js
+├── Chapter_14_Objects/
+│   ├── 116_ObjectsPart1.js
+│   ├── 117_ObjectPerson.js
+│   ├── 118_ObjectsPart2.js
+│   ├── 119_ObjectsPart3.js
+│   ├── 120_ObjectsConfig.js
+│   ├── 121_CallByValueCallByRef.js
 ├── PracticePrograms/
 │   ├── 01_HelloWorld.js
 │   ├── 02_TakeInputFromUsers.js
@@ -352,8 +363,23 @@ This section is generated from the current JavaScript files in the workspace. Ru
 ### Files covered
 
 - 109_Strings.js — Looping and iteration examples
-- 110_String_Functions.js — Basic console output example
+- 110_String_FunctionsPart1.js — Basic console output example
 - 111_String_Searching.js — Basic console output example
+- 112_SubStringExtraction.js — Array utility and transformation examples
+- 113_String_FunctionsPart2.js — Basic console output example
+- 114_StringFunctionsPart3.js — Looping and iteration examples
+- 115_StringConversions.js — Basic console output example
+
+## Chapter 14 — Objects
+
+### Files covered
+
+- 116_ObjectsPart1.js — Basic console output example
+- 117_ObjectPerson.js — Looping and iteration examples
+- 118_ObjectsPart2.js — JavaScript practice example
+- 119_ObjectsPart3.js — Basic console output example
+- 120_ObjectsConfig.js — Basic console output example
+- 121_CallByValueCallByRef.js — Basic console output example
 
 ## Practice Programs
 
