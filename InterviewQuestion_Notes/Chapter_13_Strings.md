@@ -2,7 +2,7 @@
 
 ## Summary
 
-This note summarizes the JavaScript files in Chapter_13_Strings on 2026-08-17T11:15:23.438Z.
+This note summarizes the JavaScript files in Chapter_13_Strings on 2026-08-18T08:15:08.356Z.
 Files analyzed: 7
 
 ## 109_Strings.js
@@ -13,17 +13,17 @@ Files analyzed: 7
 
 ### Core concept
 
-- Creating and converting strings
+- Template literals and string creation
 
 ### Key learnings
 
-- JavaScript strings can be declared with single quotes, double quotes, or template literals.
-- Template literals support expressions inside ${} and can span multiple lines.
-- String() can coerce values like numbers, booleans, and arrays into string form.
+- Template literals allow embedded expressions inside ${}.
+- They are easier to read than manual concatenation and can span multiple lines.
+- Single quotes, double quotes, and template literals all create strings, but template literals are more expressive.
 
 ### Interview-style note
 
-- Template literals are often preferred over manual string concatenation because they are more readable and support expressions.
+- Template literals are preferred in interview examples when output needs to include variables or multi-line formatting.
 
 ## 110_String_FunctionsPart1.js
 
@@ -33,17 +33,17 @@ Files analyzed: 7
 
 ### Core concept
 
-- Accessing characters and string properties
+- Default and rest parameters
 
 ### Key learnings
 
-- String length is zero-based for indexing, but the length property counts characters.
-- charAt() returns a character at a given index, while charCodeAt() returns its ASCII code.
-- The at() method supports negative indices, which makes it easier to access characters from the end.
+- Default parameters provide fallback values when an argument is omitted.
+- Rest parameters collect extra arguments into an array and are useful for flexible function signatures.
+- These patterns help reduce repetitive argument checks in real-world utility functions.
 
 ### Interview-style note
 
-- A strong interview answer is to remember that string indexing is zero-based, while length counts characters from 1 onward.
+- A good interview answer is that default parameters secure missing inputs while rest parameters handle unknown argument counts.
 
 ## 111_String_Searching.js
 
@@ -53,17 +53,17 @@ Files analyzed: 7
 
 ### Core concept
 
-- Searching strings with built-in methods
+- String searching and extraction
 
 ### Key learnings
 
-- includes() checks whether a substring exists inside a string.
-- startsWith() and endsWith() are useful for validating prefixes and suffixes.
-- indexOf() and lastIndexOf() return the match position, or -1 when no match exists.
+- includes() checks whether a substring exists, while startsWith() and endsWith() validate boundaries.
+- indexOf() and lastIndexOf() return positions; when no match exists, the result is -1.
+- slice() and substring() are useful for extracting portions of a string without mutating the original.
 
 ### Interview-style note
 
-- A common interview gotcha is that indexOf() returns -1 when the substring is missing, so always check for that value.
+- A common interview gotcha is that indexOf() returns -1 when a match is missing, so comparison checks must handle that value.
 
 ## 112_SubStringExtraction.js
 
@@ -73,17 +73,17 @@ Files analyzed: 7
 
 ### Core concept
 
-- Accessing characters and string properties
+- String searching and extraction
 
 ### Key learnings
 
-- String length is zero-based for indexing, but the length property counts characters.
-- charAt() returns a character at a given index, while charCodeAt() returns its ASCII code.
-- The at() method supports negative indices, which makes it easier to access characters from the end.
+- includes() checks whether a substring exists, while startsWith() and endsWith() validate boundaries.
+- indexOf() and lastIndexOf() return positions; when no match exists, the result is -1.
+- slice() and substring() are useful for extracting portions of a string without mutating the original.
 
 ### Interview-style note
 
-- A strong interview answer is to remember that string indexing is zero-based, while length counts characters from 1 onward.
+- A common interview gotcha is that indexOf() returns -1 when a match is missing, so comparison checks must handle that value.
 
 ## 113_String_FunctionsPart2.js
 
@@ -93,17 +93,17 @@ Files analyzed: 7
 
 ### Core concept
 
-- Accessing characters and string properties
+- String conversion and immutability
 
 ### Key learnings
 
-- String length is zero-based for indexing, but the length property counts characters.
-- charAt() returns a character at a given index, while charCodeAt() returns its ASCII code.
-- The at() method supports negative indices, which makes it easier to access characters from the end.
+- String conversion can be done with String(), Number(), parseInt(), and parseFloat().
+- JavaScript strings are immutable, so operations like toUpperCase() return a new string instead of changing the original.
+- Interview questions often test the difference between coercion and explicit conversion.
 
 ### Interview-style note
 
-- A strong interview answer is to remember that string indexing is zero-based, while length counts characters from 1 onward.
+- A strong answer is that JavaScript strings are immutable, so methods create new values rather than modifying the original string.
 
 ## 114_StringFunctionsPart3.js
 
@@ -113,17 +113,16 @@ Files analyzed: 7
 
 ### Core concept
 
-- Accessing characters and string properties
+- JavaScript practice concept
 
 ### Key learnings
 
-- String length is zero-based for indexing, but the length property counts characters.
-- charAt() returns a character at a given index, while charCodeAt() returns its ASCII code.
-- The at() method supports negative indices, which makes it easier to access characters from the end.
+- The file demonstrates a practical JavaScript concept.
+- The example is useful for interview revision because it highlights a real-world language behavior.
 
 ### Interview-style note
 
-- A strong interview answer is to remember that string indexing is zero-based, while length counts characters from 1 onward.
+- This example is a practical reference for a common JavaScript pattern.
 
 ## 115_StringConversions.js
 
@@ -133,13 +132,14 @@ Files analyzed: 7
 
 ### Core concept
 
-- Creating and converting strings
+- String conversion and immutability
 
 ### Key learnings
 
-- The file demonstrates a practical JavaScript concept.
-- The example is useful for interview revision because it highlights real-world language behavior.
+- String conversion can be done with String(), Number(), parseInt(), and parseFloat().
+- JavaScript strings are immutable, so operations like toUpperCase() return a new string instead of changing the original.
+- Interview questions often test the difference between coercion and explicit conversion.
 
 ### Interview-style note
 
-- This example is a practical reference for a common JavaScript pattern.
+- A strong answer is that JavaScript strings are immutable, so methods create new values rather than modifying the original string.

@@ -2,7 +2,7 @@
 
 ## Summary
 
-This note summarizes the JavaScript files in Chapter_12_FunctionClosure on 2026-08-17T11:15:23.429Z.
+This note summarizes the JavaScript files in Chapter_12_FunctionClosure on 2026-08-18T08:15:08.351Z.
 Files analyzed: 5
 
 ## 104_ScopeFn.js
@@ -13,17 +13,17 @@ Files analyzed: 5
 
 ### Core concept
 
-- Accessing characters and string properties
+- Scope and closures
 
 ### Key learnings
 
-- String length is zero-based for indexing, but the length property counts characters.
-- charAt() returns a character at a given index, while charCodeAt() returns its ASCII code.
-- The at() method supports negative indices, which makes it easier to access characters from the end.
+- Functions create their own scope, and nested functions can access variables from outer scopes.
+- Closures preserve access to outer variables even after the outer function has returned.
+- A common interview point is the difference between local variables and variables that are outside the function scope.
 
 ### Interview-style note
 
-- A strong interview answer is to remember that string indexing is zero-based, while length counts characters from 1 onward.
+- Closures are often tested by asking whether an inner function can still access outer variables after the outer function finishes.
 
 ## 105_Closure.js
 
@@ -33,17 +33,17 @@ Files analyzed: 5
 
 ### Core concept
 
-- Accessing characters and string properties
+- Scope and closures
 
 ### Key learnings
 
-- String length is zero-based for indexing, but the length property counts characters.
-- charAt() returns a character at a given index, while charCodeAt() returns its ASCII code.
-- The at() method supports negative indices, which makes it easier to access characters from the end.
+- Functions create their own scope, and nested functions can access variables from outer scopes.
+- Closures preserve access to outer variables even after the outer function has returned.
+- A common interview point is the difference between local variables and variables that are outside the function scope.
 
 ### Interview-style note
 
-- A strong interview answer is to remember that string indexing is zero-based, while length counts characters from 1 onward.
+- Closures are often tested by asking whether an inner function can still access outer variables after the outer function finishes.
 
 ## 106_Closure_Remembers.js
 
@@ -53,17 +53,17 @@ Files analyzed: 5
 
 ### Core concept
 
-- Accessing characters and string properties
+- Scope and closures
 
 ### Key learnings
 
-- String length is zero-based for indexing, but the length property counts characters.
-- charAt() returns a character at a given index, while charCodeAt() returns its ASCII code.
-- The at() method supports negative indices, which makes it easier to access characters from the end.
+- Functions create their own scope, and nested functions can access variables from outer scopes.
+- Closures preserve access to outer variables even after the outer function has returned.
+- A common interview point is the difference between local variables and variables that are outside the function scope.
 
 ### Interview-style note
 
-- A strong interview answer is to remember that string indexing is zero-based, while length counts characters from 1 onward.
+- Closures are often tested by asking whether an inner function can still access outer variables after the outer function finishes.
 
 ## 107_Closure_RealTimeEx.js
 
@@ -73,17 +73,17 @@ Files analyzed: 5
 
 ### Core concept
 
-- Accessing characters and string properties
+- Scope and closures
 
 ### Key learnings
 
-- String length is zero-based for indexing, but the length property counts characters.
-- charAt() returns a character at a given index, while charCodeAt() returns its ASCII code.
-- The at() method supports negative indices, which makes it easier to access characters from the end.
+- Functions create their own scope, and nested functions can access variables from outer scopes.
+- Closures preserve access to outer variables even after the outer function has returned.
+- A common interview point is the difference between local variables and variables that are outside the function scope.
 
 ### Interview-style note
 
-- A strong interview answer is to remember that string indexing is zero-based, while length counts characters from 1 onward.
+- Closures are often tested by asking whether an inner function can still access outer variables after the outer function finishes.
 
 ## 108_Simple_Fn.js
 
@@ -93,14 +93,14 @@ Files analyzed: 5
 
 ### Core concept
 
-- Accessing characters and string properties
+- Scope and closures
 
 ### Key learnings
 
-- String length is zero-based for indexing, but the length property counts characters.
-- charAt() returns a character at a given index, while charCodeAt() returns its ASCII code.
-- The at() method supports negative indices, which makes it easier to access characters from the end.
+- Functions create their own scope, and nested functions can access variables from outer scopes.
+- Closures preserve access to outer variables even after the outer function has returned.
+- A common interview point is the difference between local variables and variables that are outside the function scope.
 
 ### Interview-style note
 
-- A strong interview answer is to remember that string indexing is zero-based, while length counts characters from 1 onward.
+- Closures are often tested by asking whether an inner function can still access outer variables after the outer function finishes.

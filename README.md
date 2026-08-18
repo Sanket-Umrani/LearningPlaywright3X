@@ -157,6 +157,36 @@ LearnPlaywright3x/
 │   ├── 119_ObjectsPart3.js
 │   ├── 120_ObjectsConfig.js
 │   ├── 121_CallByValueCallByRef.js
+├── Chapter_15_MultiDimensionArray/
+│   ├── 122_ArrayUnderstanding.js
+│   ├── 123_ArraysPart1.js
+│   ├── 124_Array_Functions.js
+│   ├── 125_RightPatternUsingStdout.js
+│   ├── 126_LeftPatternUsingStdout.js
+│   ├── 127_PyramidPatternUsingStdout.js
+├── Chapter_16_CallBack/
+│   ├── 128_CallbackPart1.js
+│   ├── 129_CallBackPart2.js
+│   ├── 130_SyncCallBack.js
+│   ├── 131_AsyncCallback.js
+│   ├── 132_CallbackHell.js
+│   ├── 133_RealtimeExample.js
+│   ├── 134_CallReturn.js
+│   ├── 135_PyramidDOM.js
+├── Chapter_17_Promise/
+│   ├── 136_PromisePart1.js
+│   ├── 137_PromisePart2.js
+│   ├── 138_PromisePart3.js
+│   ├── 139_PromiseFinally.js
+│   ├── 140_PromisePart4.js
+│   ├── 141_PromisePart5.js
+│   ├── 142_PromisePart6.js
+│   ├── 143_PromisePart7.js
+│   ├── 144_PromiseIQ1.js
+│   ├── 145_PromiseIQ2.js
+├── Chapter_18_Async_Await/
+│   ├── 146_AsyncAwaitPart1.js
+│   ├── 147_AsyncAwaitPart2.js
 ├── PracticePrograms/
 │   ├── 01_HelloWorld.js
 │   ├── 02_TakeInputFromUsers.js
@@ -380,6 +410,52 @@ This section is generated from the current JavaScript files in the workspace. Ru
 - 119_ObjectsPart3.js — Basic console output example
 - 120_ObjectsConfig.js — Basic console output example
 - 121_CallByValueCallByRef.js — Basic console output example
+
+## Chapter 15 — MultiDimensionArray
+
+### Files covered
+
+- 122_ArrayUnderstanding.js — Looping and iteration examples
+- 123_ArraysPart1.js — Looping and iteration examples
+- 124_Array_Functions.js — Array transformation with map() and filter()
+- 125_RightPatternUsingStdout.js — Looping and iteration examples
+- 126_LeftPatternUsingStdout.js — Looping and iteration examples
+- 127_PyramidPatternUsingStdout.js — Looping and iteration examples
+
+## Chapter 16 — CallBack
+
+### Files covered
+
+- 128_CallbackPart1.js — Looping and iteration examples
+- 129_CallBackPart2.js — Looping and iteration examples
+- 130_SyncCallBack.js — Looping and iteration examples
+- 131_AsyncCallback.js — Basic console output example
+- 132_CallbackHell.js — Basic console output example
+- 133_RealtimeExample.js — Array validation and predicate checks
+- 134_CallReturn.js — Basic console output example
+- 135_PyramidDOM.js — Looping and iteration examples
+
+## Chapter 17 — Promise
+
+### Files covered
+
+- 136_PromisePart1.js — Conditional branching examples
+- 137_PromisePart2.js — Basic console output example
+- 138_PromisePart3.js — Basic console output example
+- 139_PromiseFinally.js — Basic console output example
+- 140_PromisePart4.js — Looping and iteration examples
+- 141_PromisePart5.js — Looping and iteration examples
+- 142_PromisePart6.js — Looping and iteration examples
+- 143_PromisePart7.js — Basic console output example
+- 144_PromiseIQ1.js — Array validation and predicate checks
+- 145_PromiseIQ2.js — Looping and iteration examples
+
+## Chapter 18 — Async Await
+
+### Files covered
+
+- 146_AsyncAwaitPart1.js — Basic console output example
+- 147_AsyncAwaitPart2.js — Looping and iteration examples
 
 ## Practice Programs
 
