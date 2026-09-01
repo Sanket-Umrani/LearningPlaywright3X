@@ -1,7 +1,7 @@
 let fruits=["banana","apple","cherry"];
 fruits.sort();//sort is a function so () is needed without it the output will be same as input
-console.log(fruits);
-//alphabetical by default
+console.log(fruits);//alphabetical by default
+
 let score=[4,3,2];
 console.log(score.sort());
 
@@ -20,3 +20,7 @@ console.log(nums);
 //reverse
 nums.reverse();
 console.log(nums);
+
+/**
+ * For numbers you must pass a compare function: (a, b) => a - b for ascending, (a, b) => b - a for descending.
+ */

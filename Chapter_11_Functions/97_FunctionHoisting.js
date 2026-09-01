@@ -1,4 +1,4 @@
-// Step 1 - Defination of functions
+// Step 1 - Definition of functions
 function getUserStatus() {
     //var statuscode=undefined; // not shown to you
     console.log(status_code);//undefined

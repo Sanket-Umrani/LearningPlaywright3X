@@ -15,8 +15,8 @@ function printHello1()
     }
     console.log(a);
 }
-printHello1();
-console.log(a);
+printHello1();//20 30 30
+console.log(a);//10
 console.log("************")
 
 //let is blocked scoped
@@ -41,24 +41,24 @@ printHello2();
 console.log(b);
 console.log("*********************")
 
-//let does not permit you to declare the same variable twice in the same scope
-let c=10;
-console.log(c);
-//let c=20; //SyntaxError: Identifier 'c' has already been declared 
+// //let does not permit you to declare the same variable twice in the same scope
+// let c=10;
+// console.log(c);
+// //let c=20; //SyntaxError: Identifier 'c' has already been declared 
 
-//var can be declared multiple times in the same scope
-var d=10;
-console.log(d);
-var d=20;
-console.log(d);
+// //var can be declared multiple times in the same scope
+// var d=10;
+// console.log(d);
+// var d=20;
+// console.log(d);
 
-const pi=3.14;
-console.log(pi);
-//pi=3.5; //TypeError: Assignment to constant variable.
+// const pi=3.14;
+// console.log(pi);
+// //pi=3.5; //TypeError: Assignment to constant variable.
 
-const a=[1,2,3];
-a.push(4);
-console.log(a); // [1,2,3,4] - we can modify the array but cannot reassign it to a new array
-function adasd(){
+// const a=[1,2,3];
+// a.push(4);
+// console.log(a); // [1,2,3,4] - we can modify the array but cannot reassign it to a new array
+// function adasd(){
 
-}
+// }

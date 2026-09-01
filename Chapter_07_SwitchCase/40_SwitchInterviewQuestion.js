@@ -19,3 +19,6 @@ switch (day) {
     default:
         console.log("Invalid day value");
 }
+/**
+ * With no break, matching case 2 prints Tuesday and then keeps going, printing Wednesday, Thursday, Friday, Saturday, and the default line too. Always add break unless you deliberately want fall-through.
+ */

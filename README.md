@@ -59,19 +59,23 @@ LearnPlaywright3x/
 │   ├── 34_IncreDecreImportantQuestions.js
 │   ├── 35_null_coalescing_operator.js
 ├── Chapter_06_IfElseStatement/
-│   ├── 36_if_else_if.js
+│   ├── 36_if_else_ifPatt1.js
+│   ├── 36_Ifwithoutbraces.js
+│   ├── 37_if_else_Part2.js
 │   ├── 37_if_else.js
 │   ├── 38_multiple_if_else.js
+│   ├── IQ.js
 ├── Chapter_07_SwitchCase/
 │   ├── 39_Switch.js
 │   ├── 40_SwitchInterviewQuestion.js
 │   ├── 41_SwitchInterviewQuestions.js
 │   ├── 42_API_UseCaseSwitch.js
-│   ├── 43_SwitchGroup.js
+│   ├── 43_SwitchWithGroupingCases.js
 │   ├── 44_SwitchInterviewQuestions.js
 │   ├── 45_SwitchCaseInterviewuestions.js
 │   ├── 46_SwitchCaseInterviewQuestions.js
-│   ├── 47_SwitchCaseInterviewQuestions.js
+│   ├── 47_IQPart1.js
+│   ├── 47_IQPart2.js
 ├── Chapter_08_UserInputs/
 │   ├── 48_InputFromUser.js
 │   ├── 49_NodeUIInputFromUser.js
@@ -187,12 +191,12 @@ LearnPlaywright3x/
 ├── Chapter_18_Async_Await/
 │   ├── 146_AsyncAwaitPart1.js
 │   ├── 147_AsyncAwaitPart2.js
+│   ├── 148_AsyncAwaitPart3.js
 ├── PracticePrograms/
 │   ├── 01_HelloWorld.js
 │   ├── 02_TakeInputFromUsers.js
 │   ├── 03_TablePrintUsingSystemOut.js
 │   ├── 04_FizzBuzz.js
-│   ├── 05_FindMaximumArray.js
 │   ├── 05_GradeCalculator.js
 │   ├── 06_FrequencyOfArrayElement.js
 │   ├── 06_LeapYearChecker.js
@@ -201,6 +205,20 @@ LearnPlaywright3x/
 │   ├── 09_RightTriangleStarPattern.js
 │   ├── 10_LeftTriangleStarPattern.js
 │   ├── 11_PyramidPattern.js
+│   ├── 13_CountVowelsAndConsonants.js
+│   ├── 14_PalindromeChecker.js
+│   ├── 15_StringReverse.js
+│   ├── 16_RemoveDuplicateCharactersFromString.js
+│   ├── 17_JavaAnagrams.js
+│   ├── 18_ValidEmailRegex.js
+│   ├── 19_RemoveWhiteSpacesFromString.js
+│   ├── 20_CountNumberOfWordsInString.js
+│   ├── 21_RemoveLeadingZeroesFromString.js
+│   ├── 22_ExtractFirstLetterOfEachWord.js
+│   ├── 23_FirstNonRepeatedCharacter.js
+│   ├── 38_ReverseStringPreservingSpacePositions.js
+│   ├── 39_PrimeNumberChecker.js
+│   ├── 51_FindMaximumArray.js
 │   ├── Filter_Sort_Array.js
 │   ├── FindDuplicateElements.js
 │   ├── RateLimitingAPI.js
@@ -257,7 +275,7 @@ This section is generated from the current JavaScript files in the workspace. Ru
 - 16_Comparison_Operators.js — Looping and iteration examples
 - 17_Logical_Operators.js — Basic console output example
 - 18_ConfusingComparisons_P1.js — Looping and iteration examples
-- 18_ConfusingComparisons_P2.js — Looping and iteration examples
+- 18_ConfusingComparisons_P2.js — Conditional branching examples
 - 19_Questions.js — Looping and iteration examples
 - 20_String_Operator.js — Basic console output example
 - 21_Ternary_Operator.js — Basic console output example
@@ -280,9 +298,12 @@ This section is generated from the current JavaScript files in the workspace. Ru
 
 ### Files covered
 
-- 36_if_else_if.js — Conditional branching examples
+- 36_if_else_ifPatt1.js — Conditional branching examples
+- 36_Ifwithoutbraces.js — Array validation and predicate checks
+- 37_if_else_Part2.js — Conditional branching examples
 - 37_if_else.js — Conditional branching examples
 - 38_multiple_if_else.js — Conditional branching examples
+- IQ.js — Conditional branching examples
 
 ## Chapter 07 — SwitchCase
 
@@ -292,11 +313,12 @@ This section is generated from the current JavaScript files in the workspace. Ru
 - 40_SwitchInterviewQuestion.js — Switch-case decision examples
 - 41_SwitchInterviewQuestions.js — Switch-case decision examples
 - 42_API_UseCaseSwitch.js — Switch-case decision examples
-- 43_SwitchGroup.js — Switch-case decision examples
+- 43_SwitchWithGroupingCases.js — Switch-case decision examples
 - 44_SwitchInterviewQuestions.js — Switch-case decision examples
 - 45_SwitchCaseInterviewuestions.js — Switch-case decision examples
 - 46_SwitchCaseInterviewQuestions.js — Switch-case decision examples
-- 47_SwitchCaseInterviewQuestions.js — Switch-case decision examples
+- 47_IQPart1.js — Switch-case decision examples
+- 47_IQPart2.js — Switch-case decision examples
 
 ## Chapter 08 — UserInputs
 
@@ -305,7 +327,7 @@ This section is generated from the current JavaScript files in the workspace. Ru
 - 48_InputFromUser.js — Conditional branching examples
 - 49_NodeUIInputFromUser.js — Conditional branching examples
 - 50_NodeJsUserInputViaPrompt.js — Conditional branching examples
-- 51_NodeJsUserInputWithoutPrompt.js — User input handling examples
+- 51_NodeJsUserInputWithoutPrompt.js — Looping and iteration examples
 
 ## Chapter 09 — Loops
 
@@ -330,20 +352,20 @@ This section is generated from the current JavaScript files in the workspace. Ru
 
 - 64_Array.js — Basic console output example
 - 65_Arrays.js — Looping and iteration examples
-- 66_Array_Creation.js — Basic console output example
+- 66_Array_Creation.js — Array validation and predicate checks
 - 67_ArrayAccessModify.js — Looping and iteration examples
-- 68_ArrayAddingRemove.js — Basic console output example
-- 69_Array_Real.js — Looping and iteration examples
+- 68_ArrayAddingRemove.js — Looping and iteration examples
+- 69_Array_Real.js — Conditional branching examples
 - 70_ArraySearching.js — Basic console output example
 - 71_Arrays_IQ.js — Basic console output example
-- 72_Array_Iterate.js — Looping and iteration examples
+- 72_Array_Iterate.js — Array validation and predicate checks
 - 73_ArraysTransform.js — Array transformation with map() and filter()
 - 74_Sorting.js — Array utility and transformation examples
 - 75_Slicing.js — Array utility and transformation examples
 - 76_ArrayConcat.js — Array utility and transformation examples
 - 77_ArrayChecking.js — Array transformation with map() and filter()
 - 78_ShallowDeepCopy.js — Array utility and transformation examples
-- 79_Destructuring.js — Array destructuring and rest syntax
+- 79_Destructuring.js — Array transformation with map() and filter()
 
 ## Chapter 11 — Functions
 
@@ -362,9 +384,9 @@ This section is generated from the current JavaScript files in the workspace. Ru
 - 86_TemplateLiteral.js — Basic console output example
 - 87_ExpressionFunction.js — Basic console output example
 - 88_ArrowFn.js — Basic console output example
-- 89_ArrowFn.js — Looping and iteration examples
+- 89_ArrowFn.js — Conditional branching examples
 - 90_RealTimeArrowFnUse.js — Basic console output example
-- 91_IIFE.js — Looping and iteration examples
+- 91_IIFE.js — Basic console output example
 - 92_SpreadFn.js — Array validation and predicate checks
 - 93_ReturnFn.js — Conditional branching examples
 - 94_VarLetConst1.js — Looping and iteration examples
@@ -456,6 +478,7 @@ This section is generated from the current JavaScript files in the workspace. Ru
 
 - 146_AsyncAwaitPart1.js — Basic console output example
 - 147_AsyncAwaitPart2.js — Looping and iteration examples
+- 148_AsyncAwaitPart3.js — JavaScript practice example
 
 ## Practice Programs
 
@@ -465,7 +488,6 @@ This section is generated from the current JavaScript files in the workspace. Ru
 - 02_TakeInputFromUsers.js — Looping and iteration examples
 - 03_TablePrintUsingSystemOut.js — Looping and iteration examples
 - 04_FizzBuzz.js — Conditional branching examples
-- 05_FindMaximumArray.js — Looping and iteration examples
 - 05_GradeCalculator.js — Conditional branching examples
 - 06_FrequencyOfArrayElement.js — Array transformation with map() and filter()
 - 06_LeapYearChecker.js — Conditional branching examples
@@ -473,7 +495,21 @@ This section is generated from the current JavaScript files in the workspace. Ru
 - 08_SwapTwoNumbersWithoutThirdVariable.js — Looping and iteration examples
 - 09_RightTriangleStarPattern.js — Looping and iteration examples
 - 10_LeftTriangleStarPattern.js — Looping and iteration examples
-- 11_PyramidPattern.js — JavaScript practice example
+- 11_PyramidPattern.js — Looping and iteration examples
+- 13_CountVowelsAndConsonants.js — Conditional branching examples
+- 14_PalindromeChecker.js — Conditional branching examples
+- 15_StringReverse.js — Looping and iteration examples
+- 16_RemoveDuplicateCharactersFromString.js — Looping and iteration examples
+- 17_JavaAnagrams.js — Array utility and transformation examples
+- 18_ValidEmailRegex.js — Looping and iteration examples
+- 19_RemoveWhiteSpacesFromString.js — Looping and iteration examples
+- 20_CountNumberOfWordsInString.js — Looping and iteration examples
+- 21_RemoveLeadingZeroesFromString.js — User input handling examples
+- 22_ExtractFirstLetterOfEachWord.js — Looping and iteration examples
+- 23_FirstNonRepeatedCharacter.js — Array validation and predicate checks
+- 38_ReverseStringPreservingSpacePositions.js — JavaScript practice example
+- 39_PrimeNumberChecker.js — Conditional branching examples
+- 51_FindMaximumArray.js — Looping and iteration examples
 - Filter_Sort_Array.js — Array utility and transformation examples
 - FindDuplicateElements.js — Conditional branching examples
 - RateLimitingAPI.js — Basic console output example

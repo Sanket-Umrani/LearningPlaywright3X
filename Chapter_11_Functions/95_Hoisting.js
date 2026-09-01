@@ -1,4 +1,4 @@
-var a;
+var a;//declared but not defined
 console.log(a); // undefined
 var a="Sanket";
 console.log(a); // Sanket

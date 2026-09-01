@@ -26,8 +26,16 @@
 
 // console.log(3 == "4");
 // ! -> not char
-console.log(5 != "5"); // lose -> datatype or value
-console.log(5 !== "5"); // true
-// console.log(5 !=== "5"); This dosn't
+console.log(5 != "5"); // loose comparison: JavaScript may convert the datatypes before comparing.
+console.log(5 !== "5"); // strict inequality-This checks both datatype and value.true
+//console.log(5 !==="5"); //This Does not exist in JavaScript strict equality value:    5 datatype: number true
 
 console.log(5 === 5);
+/**
+ * Loose (==, !=) → JavaScript can perform type conversion
+ * Strict (===, !==) → JavaScript checks both value and datatype without type conversion.
+ * == → loose equality
+*!= → loose inequality
+*=== → strict equality
+*!== → strict inequality 
+ */

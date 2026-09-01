@@ -28,7 +28,7 @@ console.log(getStatus(500));
 function logTestName(name)
 {
     console.log(`Running:${name}`);
-    //no reurn statement
+    //no return statement
 }
 logTestName("Sample Test");
 function aaa()

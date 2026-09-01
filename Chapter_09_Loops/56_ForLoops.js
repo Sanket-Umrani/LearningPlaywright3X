@@ -18,3 +18,4 @@ for (let somya = 0; somya < 18; somya++) {
     }
 
 }
+//Use For loop when you know how many iteration you need

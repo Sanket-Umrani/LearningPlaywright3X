@@ -1,9 +1,10 @@
+//Normal Function Declaration
 function greet(name)
 {
 return `Hi , ${name}`;
 }
-//Function as a Expression
-const greet1=function(name1) //here we just remove the function name and  assign the function to a variable greet1. This is called function expression.
+//Function as a Expression stored in const
+const greet1=function(name1) //here we just remove the function name and convert it to an identifier. This is called function expression.
 {
     return `Hi,${name1}`;
 }

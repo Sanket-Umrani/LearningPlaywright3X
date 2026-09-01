@@ -1,6 +1,7 @@
 //Immediately Invoked Function Expression (IIFE)
-//They don't need to be called. 
+//They are called automatically once () is executed. 
 
+//Normal Function Declaration and Calling
 function name1() {
     console.log("Hi")
 }

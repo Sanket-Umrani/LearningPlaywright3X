@@ -26,3 +26,4 @@ switch (day) {
     default:
         console.log("Invalid day value");
 }
+//Here day is 10, which matches no case, so only "Invalid day value" prints

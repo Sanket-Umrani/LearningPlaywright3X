@@ -6,3 +6,10 @@ function sumoftwonumbers(a,b)
 let c=sumoftwonumbers(10,20);//here the function sumoftwonumbers() is called and it will return 30 to the caller. The returned value will be stored in variable c.
 console.log(c);//here the value of variable c will be printed on console which is 30 because the function sumoftwonumbers() returns 30 to the caller.
 console.log(sumoftwonumbers(10,20));//here the function sumoftwonumbers() is called and it will return 30 to the caller. The returned value will be printed on console which is 30 because the function sumoftwonumbers() returns 30 to the caller.
+
+/**
+ * NO NO     No Argument No Return Type
+ * YES NO    Yes Argument NO Return Type
+ * NO YES    No Argument Yes Return Type
+ * YES YES   Yes Argument Yes Return Type
+ */

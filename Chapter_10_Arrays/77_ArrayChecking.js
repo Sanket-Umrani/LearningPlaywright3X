@@ -18,3 +18,9 @@ console.log("-------")
 // some — AT LEAST ONE must pass
 console.log([80,60,55].some(s=>s>60));
 console.log([80,50,40].some(s=>s>90));
+
+/**
+ * -every is like an AND across all items
+   -some is like an OR across all items
+
+ */

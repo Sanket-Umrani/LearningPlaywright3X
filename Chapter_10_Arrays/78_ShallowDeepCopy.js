@@ -5,7 +5,7 @@ let copy1=[...original];
 console.log(original);
 console.log(copy1);
 console.log("------")
-let copy2=original.slice();
+let copy2=original.slice(0,2);
 console.log(copy2);
 console.log("-----")
 let copy3=Array.from(original);
@@ -28,3 +28,7 @@ let a=original;
 a.push(101);
 console.log(original);
 console.log(a);
+
+/**
+ * let copy = arr shares the same array (a reference). Use [...arr] or arr.slice() when you want an independent copy.
+ */

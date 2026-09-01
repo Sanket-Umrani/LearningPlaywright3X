@@ -22,3 +22,13 @@ console.log(thirdOnly); // 30
 let p = 1, q = 2;
 [p, q] = [q, p];
 console.log(p, q); // 2 1
+
+/**
+ * -An array is an ordered list, indexes start at 0
+   -push / pop work at the end, shift / unshift at the beginning, splice anywhere
+   -map transforms, filter keeps matches, reduce collapses to one value
+   -sort needs (a, b) => a - b for numbers
+   -slice copies (safe), splice mutates (changes the original)
+   -let b = a is NOT a copy, use [...a] to truly copy
+
+ */

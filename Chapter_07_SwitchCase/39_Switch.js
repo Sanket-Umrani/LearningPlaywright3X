@@ -25,3 +25,18 @@ switch(day){
         default: console.log("No Idea which day it is");
                         
 }
+/**
+ * -switch compares the value against each case
+   -break stops the switch once a match is handled
+   -default runs when no case matches (like the final else)
+   -switch uses strict comparison (===) to match cases
+   -If you forget break, JavaScript keeps running the next cases too, even though they did not match. This is called fall-through.
+   -switch is a clean replacement for a long if / else if chain on one value
+   -break stops it, without break it falls through to the next cases
+   -default is the fallback for unmatched values
+   -Group cases to share logic, use switch (true) for ranges
+   -Matching is strict (===), so type matters
+
+
+
+ */

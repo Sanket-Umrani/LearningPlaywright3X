@@ -12,7 +12,7 @@ function startBrowser(){
     return installBrowser();
     
 }
-//console.log(fail); //Reference Error
-//installBrowser();//Reference Error
+console.log(fail); //Reference Error
+installBrowser();//Reference Error
 const runTc=startBrowser();
 runTc(); //Type Error 

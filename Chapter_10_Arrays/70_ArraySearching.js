@@ -11,9 +11,10 @@ let arrayindex1=results.indexOf("skip");  // -1
 console.log(arrayindex1);
 
 // lastIndexOf — searches from the end
-let lastindexof=results.lastIndexOf("fail");
-console.log(lastindexof);
+let lastindexof=results.lastIndexOf("fail"); 
+//search from  right to left but index starts from 0 from left to right
+console.log(lastindexof);//4
 
 // includes — returns boolean
-let includes=results.includes("error"); // true
-console.log(includes);
+let includes=results.includes("error"); 
+console.log(includes);// true

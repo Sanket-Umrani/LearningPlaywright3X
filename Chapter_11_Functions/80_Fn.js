@@ -10,7 +10,7 @@ console.log(result2);
 //With Functions no repeated code
 function getResult(score)
 {
-    return score>=70? "Pass":"Fail";
+    return score>=70 ? "Pass":"Fail";
     }
     getResult(85);
     console.log(getResult(85));

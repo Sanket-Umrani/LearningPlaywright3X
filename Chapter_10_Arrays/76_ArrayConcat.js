@@ -4,10 +4,11 @@ let c=a.concat(b);
 console.log(c);
 
 // spread (modern way) - concatenation. (...)
-// ... all the eleement
+// ... all the element
 let d=[...a,...b];
 console.log(d);
 // Join 
 // array into bug string
 let s=["pass","fail","skip"].join("|")
 console.log(s);
+

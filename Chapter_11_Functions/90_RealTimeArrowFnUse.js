@@ -1,3 +1,4 @@
+//Normal Function Declaration
 function validateStatusCode(status)
 {
     if(status>=200 && status<300) 
@@ -5,7 +6,7 @@ function validateStatusCode(status)
         console.log("Basic Function Success");
     }
 }
-
+//Functions as n expression(stores in const)
 const validateStatusCodeExp=function(status)
 {
     if (status>=200 && status<300)
@@ -13,7 +14,7 @@ const validateStatusCodeExp=function(status)
         console.log("Expression Function Success");
     }
 }
-
+//Arrow Function 
 const validateStatusCodeArrow=(status)=>
 {
     if(status>=200 && status<300)

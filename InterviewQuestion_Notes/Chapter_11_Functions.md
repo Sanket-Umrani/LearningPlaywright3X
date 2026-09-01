@@ -2,7 +2,7 @@
 
 ## Summary
 
-This note summarizes the JavaScript files in Chapter_11_Functions on 2026-08-18T08:15:08.313Z.
+This note summarizes the JavaScript files in Chapter_11_Functions on 2026-09-01T15:51:53.523Z.
 Files analyzed: 28
 
 ## 100_TDZ.js
@@ -33,17 +33,17 @@ Files analyzed: 28
 
 ### Core concept
 
-- Function basics
+- Scope and closures
 
 ### Key learnings
 
-- Functions encapsulate reusable logic and can accept parameters and return values.
-- Arguments are passed into function parameters, and return values send data back to the caller.
-- Practice questions often ask about declaration style, hoisting, and the role of return statements.
+- Functions create their own scope, and nested functions can access variables from outer scopes.
+- Closures preserve access to outer variables even after the outer function has returned.
+- A common interview point is the difference between local variables and variables that are outside the function scope.
 
 ### Interview-style note
 
-- A clear interview explanation is that functions reduce repetition by packaging logic into reusable blocks with explicit input and output.
+- Closures are often tested by asking whether an inner function can still access outer variables after the outer function finishes.
 
 ## 102_IQ.js
 

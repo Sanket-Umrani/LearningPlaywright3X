@@ -8,3 +8,4 @@ while (j < 10) {
     console.log(j);
     j++;
 }
+//Use it when you do not know in advance how many times you will loop

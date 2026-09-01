@@ -13,3 +13,8 @@
 // let a = 10;
 //     ↓
 // a = 10 ✅
+/**
+ * let a;
+ * console.log(a); //a is in Temporal Dead Zone 
+ * a=10;
+ */

@@ -11,3 +11,6 @@ console.log(responsedata);
 let api_response1 = "Pramod";
 let responsedata1 = api_response1 ?? "{}";
 console.log(responsedata1);
+
+//-	?? returns the right-hand value only when the left is null or undefined
+

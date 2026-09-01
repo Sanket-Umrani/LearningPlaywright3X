@@ -1,7 +1,9 @@
+//Normal Function Declaration
 function greet(name)
 {
     return `Hi,${name}!`;
 }
+//Function as a Expression (stored in const)
 const greet1=function(name1)
 {
     return `Hi,${name1}!`;

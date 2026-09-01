@@ -9,7 +9,7 @@
 // }
 // setupConfig();
 // console.log(env);
-// //console.log(timeout); //Reference Error Not Accesssible outside 
+// console.log(timeout); //Reference Error Not Accesssible outside 
 //-----
 let g_x=10;
 
@@ -20,7 +20,7 @@ function outer(){
         console.log(x); //inner can access outer variables
     }
     inner();
-    console.log(y); //outer cannot access inner variables
+    //console.log(y);//inner variable cannot be accessed outside
 }
 outer(); //this needs to be called if inner() needs to be executed
-//inner(); //reference error
+inner(); //reference error
