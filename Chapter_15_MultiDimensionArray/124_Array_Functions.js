@@ -5,14 +5,18 @@ let scores = [
 ];
 
 let rowSums = scores.map(row => row.reduce((a,b) => a+b));
+// map is responsible for iterating over each row, and reduce is responsible for summing the values in that row.
 console.log(rowSums);
-
+//[85, 90, 78].reduce((a,b) => a+b)
+//Think:85 + 90 = 175 ;175 + 78 = 253, similarly for all the rows [253, 175, 275]
+//For every student, add all their scores and give me an array of totals.
+console.log("---------------")
 let suiteResults = [
     ["login-pass", "register-pass", "logout-pass"],  // Auth suite
     ["search-pass", "filter-fail", "sort-pass"],  // Search suite
     ["checkout-fail", "payment-fail", "confirm-pass"]   // Payment suite
 ];
-console.log("---------------")
+
 for (let i = 0; i < suiteResults.length; i++) {
     for (let j = 0; j < suiteResults[i].length; j++) {
         if (suiteResults[i][j].includes("fail")) {

@@ -7,6 +7,7 @@ str.trimStart();
 str.trimEnd();
 // Replace
 let msg = "Test: FAIL. Retry: FAIL.";
-msg.replace("FAIL", "PASS"); // // "Test: PASS. Retry: FAIL."  (first only)
-msg.replaceAll("FAIL", "PASS");
-msg.replace(/FAIL/g, "PASS"); // replace all with Regex
+console.log(msg.replace("FAIL", "PASS")); 
+//"Test: PASS. Retry: FAIL."  (first replace only)
+console.log(msg.replaceAll("FAIL", "PASS"));
+console.log(msg.replace(/FAIL/g, "PASS")); // replace all with Regex

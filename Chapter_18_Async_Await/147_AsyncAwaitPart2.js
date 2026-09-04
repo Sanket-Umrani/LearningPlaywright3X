@@ -22,20 +22,22 @@ function clickLogin() {
     });
 }
 
-async function runLoginFlow() {
-    let msg1 = await openBrowser();
-    console.log("Step 1:", msg1);
+// async function runLoginFlow() {
+//     let msg1 = await openBrowser();
+//     console.log("Step 1:", msg1);
 
-    let msg2 = await goToLogin();
-    console.log("Step 2:", msg2);
+//     let msg2 = await goToLogin();
+//     console.log("Step 2:", msg2);
 
-    let msg3 = await enterCredentials();
-    console.log("Step 3:", msg3);
+//     let msg3 = await enterCredentials();
+//     console.log("Step 3:", msg3);
 
-    let msg4 = await clickLogin();
-    console.log("Step 4:", msg4);
+//     let msg4 = await clickLogin();
+//     console.log("Step 4:", msg4);
     
-}
+// }
+
+// runLoginFlow();
 
 
 
@@ -57,3 +59,7 @@ openBrowser()
     }).finally(function () {
         console.log("Done execution!");
     });
+
+    // Both approaches are correct and will produce the same output. The async/await version is more readable and easier to understand, especially for complex flows.
+    
+    

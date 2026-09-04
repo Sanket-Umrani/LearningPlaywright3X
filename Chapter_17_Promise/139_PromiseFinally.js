@@ -1,6 +1,6 @@
 let apiCall = new Promise(function(resolve,reject){
-    resolve({ status: 200});
-    //reject("error");
+    //resolve({ status: 200});
+    reject("error");
 
 })
 
@@ -12,3 +12,23 @@ apiCall.then(function(data){
     // Always Executed!
      console.log("I will be executed anyhow!!");
 })
+
+/**
+ * Promise
+             │
+             ↓
+       ❌ REJECTED
+             │
+             ↓
+          .then()
+          SKIPPED
+             │
+             ↓
+         .catch()
+             │
+             ↓
+      error = "error"
+             │
+             ↓
+         .finally()
+ */

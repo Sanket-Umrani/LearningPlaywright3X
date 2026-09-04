@@ -22,7 +22,8 @@ let grid = [
 
 for(let i=0;i<3;i++){
     for(let j=0;j<3;j++){
-        process.stdout.write(grid[i][j]+"");
+        process.stdout.write(grid[i][j]+" "); 
+        //prints the value without moving to a new line.
     }
-    console.log("");
+    console.log(""); //moves to the next line.
 }

@@ -408,7 +408,7 @@ This section is generated from the current JavaScript files in the workspace. Ru
 - 105_Closure.js — Basic console output example
 - 106_Closure_Remembers.js — Basic console output example
 - 107_Closure_RealTimeEx.js — Looping and iteration examples
-- 108_Simple_Fn.js — Basic console output example
+- 108_Simple_Fn.js — Looping and iteration examples
 
 ## Chapter 13 — Strings
 
@@ -428,17 +428,17 @@ This section is generated from the current JavaScript files in the workspace. Ru
 
 - 116_ObjectsPart1.js — Basic console output example
 - 117_ObjectPerson.js — Looping and iteration examples
-- 118_ObjectsPart2.js — JavaScript practice example
+- 118_ObjectsPart2.js — Looping and iteration examples
 - 119_ObjectsPart3.js — Basic console output example
 - 120_ObjectsConfig.js — Basic console output example
-- 121_CallByValueCallByRef.js — Basic console output example
+- 121_CallByValueCallByRef.js — Looping and iteration examples
 
 ## Chapter 15 — MultiDimensionArray
 
 ### Files covered
 
 - 122_ArrayUnderstanding.js — Looping and iteration examples
-- 123_ArraysPart1.js — Looping and iteration examples
+- 123_ArraysPart1.js — Array validation and predicate checks
 - 124_Array_Functions.js — Array transformation with map() and filter()
 - 125_RightPatternUsingStdout.js — Looping and iteration examples
 - 126_LeftPatternUsingStdout.js — Looping and iteration examples
@@ -450,8 +450,8 @@ This section is generated from the current JavaScript files in the workspace. Ru
 
 - 128_CallbackPart1.js — Looping and iteration examples
 - 129_CallBackPart2.js — Looping and iteration examples
-- 130_SyncCallBack.js — Looping and iteration examples
-- 131_AsyncCallback.js — Basic console output example
+- 130_SyncCallBack.js — Array validation and predicate checks
+- 131_AsyncCallback.js — Looping and iteration examples
 - 132_CallbackHell.js — Basic console output example
 - 133_RealtimeExample.js — Array validation and predicate checks
 - 134_CallReturn.js — Basic console output example
@@ -466,9 +466,9 @@ This section is generated from the current JavaScript files in the workspace. Ru
 - 138_PromisePart3.js — Basic console output example
 - 139_PromiseFinally.js — Basic console output example
 - 140_PromisePart4.js — Looping and iteration examples
-- 141_PromisePart5.js — Looping and iteration examples
-- 142_PromisePart6.js — Looping and iteration examples
-- 143_PromisePart7.js — Basic console output example
+- 141_PromisePart5.js — Array validation and predicate checks
+- 142_PromisePart6.js — Array validation and predicate checks
+- 143_PromisePart7.js — Array validation and predicate checks
 - 144_PromiseIQ1.js — Array validation and predicate checks
 - 145_PromiseIQ2.js — Looping and iteration examples
 
@@ -476,7 +476,7 @@ This section is generated from the current JavaScript files in the workspace. Ru
 
 ### Files covered
 
-- 146_AsyncAwaitPart1.js — Basic console output example
+- 146_AsyncAwaitPart1.js — Looping and iteration examples
 - 147_AsyncAwaitPart2.js — Looping and iteration examples
 - 148_AsyncAwaitPart3.js — JavaScript practice example
 

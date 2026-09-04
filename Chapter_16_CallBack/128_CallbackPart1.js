@@ -7,6 +7,10 @@ function placeOrder(item, callback){
 function print() {
     console.log("Normal Fn - Done with the order");
 }
+/**
+ * print   means : Here is the function. You can execute it later.
+ * print() means :Execute the function now and give me the result of that function.
+ */
 // First Way
 placeOrder("Burger", print);
 
@@ -32,3 +36,5 @@ placeOrder("Burger", () => {
 test('has title', async ({ page }) => {
 
 });
+
+// Callback core idea is Give another function a function so it can call that function later

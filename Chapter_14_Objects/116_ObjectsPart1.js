@@ -19,7 +19,8 @@ console.log(a.status);
 let c = { status: "pass" };
 let d = { status: "pass" };
 console.log(c === d);
-
+// as c and d are pointing to two different objects in memory,they are not equal and are thus false, even though they have the same properties and values. 
+//to make it equal and true, c and d should point to the same object in memory,like this : c = d; // Now c and d point to the same object in memory
 
 const t_json = {
     "name": "pramod",
@@ -32,3 +33,15 @@ const t_js = {
     age: 10
 };
 console.log(t_js);
+
+/**
+ * JavaScript object:
+{ name: "pramod" }       ✅
+{ "name": "pramod" }     ✅
+ {"name": pramod }       ❌
+ 
+
+JSON:
+{ "name": "pramod" }     ✅
+{ name: "pramod" }       ❌
+ */

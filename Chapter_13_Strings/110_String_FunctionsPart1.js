@@ -11,5 +11,5 @@ console.log(str.at(-1));
 console.log(str.at(-6));
 
 // charAt()
-str.charAt(0); 
-str.charCodeAt(0);  // 72
+console.log(str.charAt(0)); 
+console.log(str.charCodeAt(0));  // 72

@@ -41,3 +41,21 @@ openBrowser()
     }).finally(function () {
         console.log("Done execution!");
     });
+
+    /**
+     * openBrowser()
+     ↓
+Promise resolved with
+"Browser has been opened!"
+     ↓
+.then(msg)
+     ↓
+return goToLogin()
+     ↓
+Promise resolved with
+"Login page loaded"
+     ↓
+next .then(msg)
+
+Therefore the next .then() receives "Login page loaded"
+     */

@@ -2,7 +2,7 @@
 
 ## Summary
 
-This note summarizes the JavaScript files in Chapter_13_Strings on 2026-09-02T07:57:01.002Z.
+This note summarizes the JavaScript files in Chapter_13_Strings on 2026-09-04T15:53:59.216Z.
 Files analyzed: 7
 
 ## 109_Strings.js
@@ -73,17 +73,17 @@ Files analyzed: 7
 
 ### Core concept
 
-- String searching and extraction
+- Default and rest parameters
 
 ### Key learnings
 
-- includes() checks whether a substring exists, while startsWith() and endsWith() validate boundaries.
-- indexOf() and lastIndexOf() return positions; when no match exists, the result is -1.
-- slice() and substring() are useful for extracting portions of a string without mutating the original.
+- Default parameters provide fallback values when an argument is omitted.
+- Rest parameters collect extra arguments into an array and are useful for flexible function signatures.
+- These patterns help reduce repetitive argument checks in real-world utility functions.
 
 ### Interview-style note
 
-- A common interview gotcha is that indexOf() returns -1 when a match is missing, so comparison checks must handle that value.
+- A good interview answer is that default parameters secure missing inputs while rest parameters handle unknown argument counts.
 
 ## 113_String_FunctionsPart2.js
 
