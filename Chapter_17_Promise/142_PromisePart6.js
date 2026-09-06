@@ -14,11 +14,11 @@ Promise.allSettled([ //I don't care whether they pass or fail. Wait until ALL TH
 
 This is the key difference to remember:
 
-	Promise.all()	Promise.allSettled()
-All succeed	.then()	.then()
-One fails	❌ .catch()	✅ .then()
-Waits for every Promise	Not necessarily	✅ Yes
-Gives individual status	No	✅ Yes
+	Promise.all()	                Promise.allSettled()
+All succeed	.then()	                .then()
+One fails	❌ .catch()	          ✅ .then()
+Waits for every Promise	            Not necessarily	✅ Yes
+Gives individual status	            No	✅ Yes
 Useful for	"Everything must pass"	"Tell me what happened to everything"
  */
 

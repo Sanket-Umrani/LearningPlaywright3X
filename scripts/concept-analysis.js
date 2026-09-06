@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
+const { execFileSync } = require('child_process');
 
 const repoRoot = path.resolve(__dirname, '..');
 const notesDir = path.join(repoRoot, 'InterviewQuestion_Notes');
@@ -16,8 +17,7 @@ function sanitizeFileName(name) {
 
 function getNoteTargetPath(repoRootPath, chapterDirName) {
   const noteName = `${sanitizeFileName(chapterDirName)}.md`;
-  const candidate = path.join(repoRootPath, 'InterviewQuestion_Notes', noteName);
-  return fs.existsSync(candidate) ? candidate : null;
+  return path.join(repoRootPath, 'InterviewQuestion_Notes', noteName);
 }
 
 function getChapterDirectories(repoRootPath) {
@@ -52,6 +52,33 @@ function getJavaScriptFilesForChapter(repoRootPath, chapterDirName) {
   }
 
   return files.sort();
+}
+
+function getGitPaths(repoRootPath, gitArguments) {
+  try {
+    return execFileSync('git', ['-C', repoRootPath, ...gitArguments], {
+      encoding: 'utf8'
+    })
+      .split(/\r?\n/)
+      .map((filePath) => filePath.trim())
+      .filter(Boolean);
+  } catch (error) {
+    return [];
+  }
+}
+
+function getChangedJavaScriptFiles(repoRootPath) {
+  const changedPaths = [
+    ...getGitPaths(repoRootPath, ['diff', '--name-only', '--diff-filter=ACMRTUXB']),
+    ...getGitPaths(repoRootPath, ['diff', '--cached', '--name-only', '--diff-filter=ACMRTUXB']),
+    ...getGitPaths(repoRootPath, ['ls-files', '--others', '--exclude-standard'])
+  ];
+
+  return [...new Set(changedPaths)]
+    .filter((filePath) => filePath.toLowerCase().endsWith('.js'))
+    .map((filePath) => path.resolve(repoRootPath, filePath))
+    .filter((filePath) => fs.existsSync(filePath))
+    .sort();
 }
 
 function getConceptDetails(fileName, content, chapterName) {
@@ -207,18 +234,65 @@ function buildMarkdown(chapterName, files) {
   return lines.join('\n').trimEnd() + '\n';
 }
 
+function buildChangedMarkdown(repoRootPath, files) {
+  const now = new Date().toISOString();
+  const lines = [
+    '# Modified and Untracked JavaScript Concept Analysis',
+    '',
+    '## Summary',
+    '',
+    `This note summarizes modified and untracked JavaScript files in the workspace on ${now}.`,
+    `Files analyzed: ${files.length}`,
+    ''
+  ];
+
+  files.forEach((file) => {
+    const relativePath = path.relative(repoRootPath, file).replace(/\\/g, '/');
+    const content = fs.readFileSync(file, 'utf8');
+    const baseName = path.basename(relativePath);
+    const chapterName = path.dirname(relativePath);
+    const details = getConceptDetails(baseName, content, chapterName);
+
+    lines.push(`## ${baseName}`);
+    lines.push('');
+    lines.push('### File');
+    lines.push('');
+    lines.push(`- ${relativePath}`);
+    lines.push('');
+    lines.push('### Core concept');
+    lines.push('');
+    lines.push(`- ${details.name}`);
+    lines.push('');
+    lines.push('### Key learnings');
+    lines.push('');
+    details.learnings.forEach((learning) => lines.push(`- ${learning}`));
+    lines.push('');
+    lines.push('### Interview-style note');
+    lines.push('');
+    lines.push(`- ${details.note}`);
+    lines.push('');
+  });
+
+  return lines.join('\n').trimEnd() + '\n';
+}
+
 function main() {
   fs.mkdirSync(notesDir, { recursive: true });
+
+  const changedJavaScriptFiles = getChangedJavaScriptFiles(repoRoot);
+  const changedNotesPath = path.join(notesDir, 'ConceptAnalysis_Untracked_Notes.md');
+  if (changedJavaScriptFiles.length) {
+    fs.writeFileSync(changedNotesPath, buildChangedMarkdown(repoRoot, changedJavaScriptFiles), 'utf8');
+    console.log(`Updated ${path.relative(repoRoot, changedNotesPath)} with ${changedJavaScriptFiles.length} modified or untracked JavaScript file(s).`);
+  } else {
+    console.log('No modified or untracked JavaScript files found.');
+  }
 
   const chapterDirectories = getChapterDirectories(repoRoot);
   let updatedCount = 0;
 
   chapterDirectories.forEach((chapterName) => {
     const targetPath = getNoteTargetPath(repoRoot, chapterName);
-    if (!targetPath) {
-      return;
-    }
-
     const files = getJavaScriptFilesForChapter(repoRoot, chapterName);
     if (!files.length) {
       return;
@@ -231,12 +305,16 @@ function main() {
   });
 
   if (!updatedCount) {
-    console.log('No existing chapter note files were updated.');
+    console.log('No chapter directories with JavaScript files were found.');
   }
 }
 
-main();
+if (require.main === module) {
+  main();
+}
 
 module.exports = {
-  getNoteTargetPath
+  getNoteTargetPath,
+  getChangedJavaScriptFiles,
+  buildChangedMarkdown
 };

@@ -192,6 +192,13 @@ LearnPlaywright3x/
 │   ├── 146_AsyncAwaitPart1.js
 │   ├── 147_AsyncAwaitPart2.js
 │   ├── 148_AsyncAwaitPart3.js
+│   ├── 149_AsyncAwaitEx.js
+│   ├── 150_AsyncAwaitPart4.js
+│   ├── 151_SequenceExecution.js
+│   ├── 152_ParallelExecution.js
+│   ├── 153_API_FlakyTestCase1.js
+│   ├── 153_API_FlakyTestCase2.js
+│   ├── 154_AsyncAwaitIQ.js
 ├── PracticePrograms/
 │   ├── 01_HelloWorld.js
 │   ├── 02_TakeInputFromUsers.js
@@ -478,7 +485,14 @@ This section is generated from the current JavaScript files in the workspace. Ru
 
 - 146_AsyncAwaitPart1.js — Looping and iteration examples
 - 147_AsyncAwaitPart2.js — Looping and iteration examples
-- 148_AsyncAwaitPart3.js — JavaScript practice example
+- 148_AsyncAwaitPart3.js — Looping and iteration examples
+- 149_AsyncAwaitEx.js — JavaScript practice example
+- 150_AsyncAwaitPart4.js — Basic console output example
+- 151_SequenceExecution.js — Looping and iteration examples
+- 152_ParallelExecution.js — Array validation and predicate checks
+- 153_API_FlakyTestCase1.js — Array validation and predicate checks
+- 153_API_FlakyTestCase2.js — Looping and iteration examples
+- 154_AsyncAwaitIQ.js — Looping and iteration examples
 
 ## Practice Programs
 
