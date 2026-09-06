@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Linux Basic Commands for QA</title>
+<style>
+:root{--ink:#14221f;--muted:#62716b;--paper:#f4f0e7;--card:#fffdf7;--line:#d9d5c9;--green:#176b55;--lime:#c7df62;--orange:#e8794f;--navy:#183b4d;--code:#172a2a}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Georgia,"Times New Roman",serif;line-height:1.45}body:before{content:"";position:fixed;inset:0;z-index:-1;opacity:.3;background-image:radial-gradient(#c8c2b3 1px,transparent 1px);background-size:20px 20px}.wrap{width:1180px;margin:auto}.top{display:flex;justify-content:space-between;align-items:center;padding:24px 0 18px;border-bottom:1px solid var(--line);font:700 12px "Trebuchet MS",sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--green)}.top span:last-child{color:var(--muted)}.hero{padding:52px 0 42px;display:grid;grid-template-columns:1.15fr .85fr;gap:70px;align-items:end}.eyebrow{color:var(--orange);font:700 12px "Trebuchet MS",sans-serif;letter-spacing:.16em;text-transform:uppercase}.hero h1{font-size:78px;line-height:.9;letter-spacing:-.06em;margin:15px 0 18px;max-width:700px}.hero p{margin:0;color:var(--muted);font-size:20px;max-width:610px}.hero-note{padding:22px;background:var(--green);color:#fffdf7;font-size:18px;box-shadow:12px 12px 0 var(--lime)}.hero-note strong{display:block;color:var(--lime);font:700 12px "Trebuchet MS",sans-serif;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px}.section-title{display:flex;align-items:baseline;gap:14px;margin:0 0 16px;border-bottom:2px solid var(--ink);padding-bottom:10px}.section-title b{color:var(--orange);font:700 13px "Trebuchet MS",sans-serif}.section-title h2{font-size:31px;line-height:1;margin:0}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:34px}.card{background:var(--card);border:1px solid var(--line);padding:18px;min-height:196px;box-shadow:0 8px 20px #554f4010}.card h3{margin:0 0 5px;font-size:18px}.card p{margin:0 0 13px;color:var(--muted);font-size:13px}.cmd{display:block;background:var(--code);color:#e9f4d1;padding:9px 11px;margin:8px 0;font:13px/1.35 Consolas,"Courier New",monospace;white-space:pre-wrap}.cmd em{color:var(--lime);font-style:normal}.wide{grid-column:span 2}.workflow{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:0 0 34px}.step{padding:15px 13px;background:var(--navy);color:#f4f0e7;min-height:105px}.step strong{display:block;color:var(--lime);font:700 11px "Trebuchet MS",sans-serif;letter-spacing:.08em;text-transform:uppercase;margin-bottom:7px}.step span{font-size:15px}.footer{border-top:2px solid var(--ink);padding:18px 0 34px;color:var(--muted);font-size:13px}.footer strong{color:var(--ink)}@media(max-width:800px){.wrap{width:calc(100% - 28px)}.hero{display:block}.hero h1{font-size:58px}.hero-note{margin-top:28px}.grid{grid-template-columns:1fr}.wide{grid-column:auto}.workflow{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top"><span>QA Field Guide / 01</span><span>Linux basics for daily testing</span></header>
+<section class="hero"><div><div class="eyebrow">Terminal confidence</div><h1>Linux commands for QA.</h1><p>A practical command map for navigating test environments, checking services, reading logs, calling APIs, and collecting evidence without leaving the terminal.</p></div><aside class="hero-note"><strong>QA habit</strong>Know where you are, inspect before changing, capture the exact command and output, then clean up what you created.</aside></section>
+<section><div class="section-title"><b>01</b><h2>Move around and manage test files</h2></div><div class="grid">
+<article class="card"><h3>Navigate</h3><p>Confirm the current directory before running a path-sensitive test.</p><code class="cmd"><em>pwd</em>                 # current path
+<em>ls -la</em>              # all files + details
+<em>cd /var/log</em>         # change directory
+<em>cd -</em>                # previous directory</code></article>
+<article class="card"><h3>Create and inspect</h3><p>Use small files to reproduce a test condition or preserve a request payload.</p><code class="cmd"><em>mkdir -p test-data</em>
+<em>touch payload.json</em>
+<em>cat payload.json</em>
+<em>less application.log</em></code></article>
+<article class="card"><h3>Copy, move, remove</h3><p>Be deliberate with destructive operations in shared environments.</p><code class="cmd"><em>cp app.log backup.log</em>
+<em>mv old.json archive/</em>
+<em>rm -i temp.txt</em>
+<em>find . -name "*.log"</em></code></article>
+</div></section>
+<section><div class="section-title"><b>02</b><h2>Search failures and understand output</h2></div><div class="grid">
+<article class="card wide"><h3>Search logs with context</h3><p>Filter noise, keep nearby lines, and count recurring failures.</p><code class="cmd"><em>grep -in "error" application.log</em>
+<em>grep -in -C 3 "timeout" application.log</em>
+<em>grep -Rin "failed" ./test-results/</em>
+<em>grep -ic "500" access.log</em></code></article>
+<article class="card"><h3>Head, tail, follow</h3><p>Useful for startup checks and watching a running test.</p><code class="cmd"><em>head -n 30 app.log</em>
+<em>tail -n 50 app.log</em>
+<em>tail -f app.log</em></code></article>
+<article class="card"><h3>Pipe the evidence</h3><p>Send one command's output into another command.</p><code class="cmd"><em>ps aux | grep node</em>
+<em>cat results.txt | wc -l</em>
+<em>history | tail</em></code></article>
+</div></section>
+<section><div class="section-title"><b>03</b><h2>Check processes, ports, and permissions</h2></div><div class="grid">
+<article class="card"><h3>Is the service alive?</h3><p>Identify processes and inspect the port your test depends on.</p><code class="cmd"><em>ps aux | grep app</em>
+<em>pgrep -af node</em>
+<em>ss -tulpn</em>
+<em>lsof -i :3000</em></code></article>
+<article class="card"><h3>Permissions</h3><p>Read access failures before changing anything. Avoid broad chmod in shared systems.</p><code class="cmd"><em>ls -l test.sh</em>
+<em>chmod u+x test.sh</em>
+<em>./test.sh</em>
+<em>whoami</em></code></article>
+<article class="card"><h3>Resources</h3><p>Slow tests can be environment problems, not product failures.</p><code class="cmd"><em>df -h</em>              # disk
+<em>free -h</em>             # memory
+<em>top</em>                 # live usage</code></article>
+</div></section>
+<section><div class="section-title"><b>04</b><h2>Network and API smoke checks</h2></div><div class="grid">
+<article class="card wide"><h3>curl: fast endpoint evidence</h3><p>Keep headers, status codes, and response bodies visible in a repeatable command.</p><code class="cmd"><em>curl -I https://qa.example.com/health</em>
+<em>curl -sS -o response.json -w "%{http_code}" https://qa.example.com/api/users</em>
+<em>curl -X POST -H "Content-Type: application/json" -d @payload.json https://qa.example.com/api/login</em></code></article>
+<article class="card"><h3>Reachability</h3><p>Separate DNS or network failures from application failures.</p><code class="cmd"><em>ping -c 4 qa.example.com</em>
+<em>nslookup qa.example.com</em>
+<em>curl -v https://qa.example.com</em></code></article>
+<article class="card"><h3>Download a test artifact</h3><p>Preserve a build, report, or fixture for later inspection.</p><code class="cmd"><em>wget URL</em>
+<em>curl -O URL</em>
+<em>sha256sum report.zip</em></code></article>
+</div></section>
+<section><div class="section-title"><b>05</b><h2>QA terminal workflow</h2></div><div class="workflow"><div class="step"><strong>01 / Locate</strong><span><code>pwd</code><br><code>ls -la</code></span></div><div class="step"><strong>02 / Reproduce</strong><span>Run the smallest command that shows the failure.</span></div><div class="step"><strong>03 / Inspect</strong><span><code>grep</code>, <code>tail</code>, <code>curl</code>, process and port checks.</span></div><div class="step"><strong>04 / Record</strong><span>Save command, timestamp, status code, logs, and environment.</span></div><div class="step"><strong>05 / Clean up</strong><span>Remove temporary data and stop only what you started.</span></div></div></section>
+<footer class="footer"><strong>Safety notes:</strong> use <code>rm -i</code> while learning, quote paths with spaces, prefer least privilege, and never paste secrets into shell history or bug reports. Replace example hosts and paths with your QA environment.</footer>
+</div>
+</body>
+</html>

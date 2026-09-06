@@ -1,15 +1,15 @@
-# Chapter_01_Basics - JavaScript Concept Analysis
+# Chapter_20_Class_Objects_OOPs - JavaScript Concept Analysis
 
 ## Summary
 
-This note summarizes the JavaScript files in Chapter_01_Basics on 2026-09-06T16:33:22.354Z.
+This note summarizes the JavaScript files in Chapter_20_Class_Objects_OOPs on 2026-09-06T16:33:22.515Z.
 Files analyzed: 1
 
-## 01_HelloWorld.js
+## 158_ClassObjects1.js
 
 ### File
 
-- Chapter_01_Basics/01_HelloWorld.js
+- Chapter_20_Class_Objects_OOPs/158_ClassObjects1.js
 
 ### Core concept
 

@@ -199,6 +199,14 @@ LearnPlaywright3x/
 │   ├── 153_API_FlakyTestCase1.js
 │   ├── 153_API_FlakyTestCase2.js
 │   ├── 154_AsyncAwaitIQ.js
+├── Chapter_19_ExportImport/
+│   ├── 155_ExportImport1.js
+│   ├── 156_ExportImportWithAlias.js
+│   ├── 157_ExportImport2.js
+│   ├── testutils.js
+│   ├── utils.js
+├── Chapter_20_Class_Objects_OOPs/
+│   ├── 158_ClassObjects1.js
 ├── PracticePrograms/
 │   ├── 01_HelloWorld.js
 │   ├── 02_TakeInputFromUsers.js
@@ -493,6 +501,22 @@ This section is generated from the current JavaScript files in the workspace. Ru
 - 153_API_FlakyTestCase1.js — Array validation and predicate checks
 - 153_API_FlakyTestCase2.js — Looping and iteration examples
 - 154_AsyncAwaitIQ.js — Looping and iteration examples
+
+## Chapter 19 — ExportImport
+
+### Files covered
+
+- 155_ExportImport1.js — Looping and iteration examples
+- 156_ExportImportWithAlias.js — Looping and iteration examples
+- 157_ExportImport2.js — Looping and iteration examples
+- testutils.js — Looping and iteration examples
+- utils.js — Looping and iteration examples
+
+## Chapter 20 — Class Objects OOPs
+
+### Files covered
+
+- 158_ClassObjects1.js — JavaScript practice example
 
 ## Practice Programs
 
