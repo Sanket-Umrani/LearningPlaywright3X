@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<!-- saved from url=(0088)file:///C:/Users/Sanket/VSCodeProjects/LearningPlaywright3X/async-promises-tutorial.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A practical JavaScript tutorial covering callbacks, Promises, async, await, Promise.all, Promise.race, and the Promise constructor.">
+  <title>Async JavaScript Field Guide</title>
+  <style>
+    :root {
+      --ink: #17202a;
+      --muted: #657078;
+      --paper: #f7f4ed;
+      --card: #fffdf8;
+      --line: #ded8ca;
+      --coral: #e05d44;
+      --coral-dark: #a33b2d;
+      --teal: #147d78;
+      --yellow: #f5c95b;
+      --shadow: 0 18px 45px rgba(50, 45, 33, .10);
+      --code: #202a30;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.6;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      opacity: .28;
+      background-image: radial-gradient(#d8cdb9 1px, transparent 1px);
+      background-size: 22px 22px;
+      pointer-events: none;
+    }
+    .shell { width: min(1180px, calc(100% - 36px)); margin: 0 auto; }
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .brand { color: var(--coral-dark); font: 700 1rem/1.1 "Trebuchet MS", sans-serif; letter-spacing: .08em; text-transform: uppercase; }
+    .topbar a { color: var(--muted); font: 600 .85rem/1 "Trebuchet MS", sans-serif; text-decoration: none; }
+    .hero { padding: 76px 0 66px; max-width: 830px; }
+    .eyebrow { color: var(--teal); font: 700 .8rem/1 "Trebuchet MS", sans-serif; letter-spacing: .14em; text-transform: uppercase; }
+    h1 { max-width: 780px; margin: 18px 0 18px; font-size: clamp(3.1rem, 8vw, 6.7rem); line-height: .93; letter-spacing: -.055em; font-weight: 700; }
+    .hero p { max-width: 690px; margin: 0; color: var(--muted); font-size: 1.22rem; }
+    .hero-note { display: inline-block; margin-top: 28px; padding: 9px 13px; color: var(--ink); background: var(--yellow); font: 700 .78rem/1 "Trebuchet MS", sans-serif; letter-spacing: .04em; text-transform: uppercase; transform: rotate(-2deg); }
+    .layout { display: grid; grid-template-columns: 220px 1fr; gap: 54px; align-items: start; }
+    .toc { position: sticky; top: 20px; padding: 18px 0; border-top: 3px solid var(--ink); }
+    .toc strong { display: block; margin-bottom: 12px; font: 700 .75rem/1 "Trebuchet MS", sans-serif; letter-spacing: .12em; text-transform: uppercase; }
+    .toc a { display: block; padding: 5px 0; color: var(--muted); font: .95rem/1.35 "Trebuchet MS", sans-serif; text-decoration: none; }
+    .toc a:hover { color: var(--coral-dark); }
+    main { min-width: 0; }
+    section { margin-bottom: 70px; scroll-margin-top: 24px; }
+    .section-head { display: flex; gap: 16px; align-items: baseline; border-bottom: 1px solid var(--line); }
+    .number { color: var(--coral); font: 700 1rem/1 "Trebuchet MS", sans-serif; }
+    h2 { margin: 0 0 13px; font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1; letter-spacing: -.035em; }
+    h3 { margin: 25px 0 8px; font-size: 1.4rem; }
+    p { margin: 10px 0; }
+    .lead { margin: 20px 0 24px; color: var(--muted); font-size: 1.08rem; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    .card { padding: 24px; border: 1px solid var(--line); background: var(--card); box-shadow: var(--shadow); }
+    .card h3 { margin-top: 0; }
+    .tag { display: inline-block; margin-bottom: 10px; color: var(--teal); font: 700 .72rem/1 "Trebuchet MS", sans-serif; letter-spacing: .1em; text-transform: uppercase; }
+    pre { position: relative; overflow: auto; margin: 18px 0; padding: 21px; color: #edf4ee; background: var(--code); font: .86rem/1.65 Consolas, "Courier New", monospace; tab-size: 2; }
+    code { font-family: Consolas, "Courier New", monospace; }
+    :not(pre) > code { padding: 2px 5px; color: var(--coral-dark); background: #f2e7d5; font-size: .9em; }
+    .code-label { margin: 24px 0 -18px; color: var(--yellow); font: 700 .7rem/1 "Trebuchet MS", sans-serif; letter-spacing: .1em; text-transform: uppercase; }
+    .callout { margin: 22px 0; padding: 18px 20px; border-left: 5px solid var(--teal); background: #e4f1ed; }
+    .callout strong { display: block; margin-bottom: 3px; font-family: "Trebuchet MS", sans-serif; }
+    .demo { padding: 23px; background: var(--ink); color: #eef1e9; }
+    .demo h3 { color: var(--yellow); }
+    .demo p { color: #b9c5c0; }
+    button { border: 0; padding: 11px 15px; color: #fffdf8; background: var(--coral); cursor: pointer; font: 700 .82rem/1 "Trebuchet MS", sans-serif; }
+    button:hover { background: #ef765e; }
+    .output { min-height: 42px; margin-top: 14px; padding: 10px 12px; color: #b9e2d4; background: #10191d; font: .83rem/1.45 Consolas, monospace; white-space: pre-wrap; }
+    .comparison { width: 100%; border-collapse: collapse; background: var(--card); box-shadow: var(--shadow); }
+    th, td { padding: 14px 15px; border: 1px solid var(--line); text-align: left; vertical-align: top; }
+    th { color: var(--teal); background: #e4f1ed; font: 700 .75rem/1.2 "Trebuchet MS", sans-serif; letter-spacing: .08em; text-transform: uppercase; }
+    footer { margin-top: 20px; padding: 36px 0 60px; border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
+    footer a { color: var(--coral-dark); }
+    @media (max-width: 760px) {
+      .shell { width: min(100% - 26px, 620px); }
+      .topbar { padding: 18px 0; }
+      .hero { padding: 55px 0 45px; }
+      .layout { display: block; }
+      .toc { position: static; display: flex; gap: 12px; overflow-x: auto; margin-bottom: 52px; padding: 12px 0; border-bottom: 1px solid var(--line); border-top: 3px solid var(--ink); white-space: nowrap; }
+      .toc strong { display: none; }
+      .toc a { padding: 0; }
+      .grid { grid-template-columns: 1fr; }
+      section { margin-bottom: 56px; }
+      .card { padding: 19px; }
+      th, td { padding: 10px; font-size: .88rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="shell topbar">
+    <div class="brand">JavaScript / Async Field Guide</div>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer">Reference shelf ↗</a>
+  </header>
+
+  <div class="shell hero">
+    <div class="eyebrow">A practical tutorial</div>
+    <h1>Make time work for your code.</h1>
+    <p>Callbacks start the story. Promises give asynchronous work a state. <code>async</code> and <code>await</code> make that story readable, while concurrency helpers decide how multiple jobs cooperate.</p>
+    <span class="hero-note">Read it, run it, remember it</span>
+  </div>
+
+  <div class="shell layout">
+    <nav class="toc" aria-label="Tutorial sections">
+      <strong>On this page</strong>
+      <a href="file:///C:/Users/Sanket/VSCodeProjects/LearningPlaywright3X/async-promises-tutorial.html#mental-model">Mental model</a>
+      <a href="file:///C:/Users/Sanket/VSCodeProjects/LearningPlaywright3X/async-promises-tutorial.html#async">01 Async</a>
+      <a href="file:///C:/Users/Sanket/VSCodeProjects/LearningPlaywright3X/async-promises-tutorial.html#await">02 Await</a>
+      <a href="file:///C:/Users/Sanket/VSCodeProjects/LearningPlaywright3X/async-promises-tutorial.html#all">03 Promise.all</a>
+      <a href="file:///C:/Users/Sanket/VSCodeProjects/LearningPlaywright3X/async-promises-tutorial.html#race">04 Promise.race</a>
+      <a href="file:///C:/Users/Sanket/VSCodeProjects/LearningPlaywright3X/async-promises-tutorial.html#constructor">05 new Promise</a>
+      <a href="file:///C:/Users/Sanket/VSCodeProjects/LearningPlaywright3X/async-promises-tutorial.html#callback">06 Callback</a>
+      <a href="file:///C:/Users/Sanket/VSCodeProjects/LearningPlaywright3X/async-promises-tutorial.html#choose">Choose well</a>
+    </nav>
+
+    <main>
+      <section id="mental-model">
+        <div class="section-head"><span class="number">00</span><h2>The mental model</h2></div>
+        <p class="lead">JavaScript does not stop the whole program while waiting for slow work. It starts the work, keeps the main thread available, and later handles the result.</p>
+        <div class="grid">
+          <article class="card"><span class="tag">Promise states</span><h3>Pending → fulfilled or rejected</h3><p>A Promise is an object representing a future result. It starts <strong>pending</strong>, then settles once as either successful (<strong>fulfilled</strong>) or failed (<strong>rejected</strong>).</p></article>
+          <article class="card"><span class="tag">One useful question</span><h3>What happens next?</h3><p>Ask whether the operation depends on the previous result. Dependent work is usually sequential. Independent work can start together with <code>Promise.all</code>.</p></article>
+        </div>
+      </section>
+
+      <section id="async">
+        <div class="section-head"><span class="number">01</span><h2><code>async</code></h2></div>
+        <p class="lead">The <code>async</code> keyword creates an asynchronous function. Calling it always returns a Promise, even when the function returns an ordinary value.</p>
+        <pre><code>async function getMessage() {
+  return "Hello from an async function";
+}
+
+getMessage().then(console.log); // the value arrives through a Promise</code></pre>
+        <div class="callout"><strong>Interview takeaway</strong><code>async function answer() { return 42; }</code> behaves like a function that returns a fulfilled Promise containing <code>42</code>.</div>
+        <div class="demo"><h3>Run it: async always returns a Promise</h3><p>Open the output to see both the constructor and the eventual value.</p><button data-demo="async">Run example</button><div class="output" id="output-async">Waiting for a run...</div></div>
+      </section>
+
+      <section id="await">
+        <div class="section-head"><span class="number">02</span><h2><code>await</code></h2></div>
+        <p class="lead"><code>await</code> pauses the surrounding async function until a Promise settles. On fulfillment it produces the value; on rejection it throws, so use <code>try...catch</code> when you need recovery.</p>
+        <pre><code>async function loadUser() {
+  try {
+    const response = await fetch("/api/user");
+    return response.json();
+  } catch (error) {
+    console.error("Could not load user", error);
+  }
+}</code></pre>
+        <p><strong>Important:</strong> <code>await</code> does not block the entire JavaScript thread. It suspends only the current async function and lets other work continue.</p>
+        <div class="demo"><h3>Run it: await and error handling</h3><p>The rejected Promise becomes a catchable exception.</p><button data-demo="await">Run example</button><div class="output" id="output-await">Waiting for a run...</div></div>
+      </section>
+
+      <section id="all">
+        <div class="section-head"><span class="number">03</span><h2><code>Promise.all</code></h2></div>
+        <p class="lead">Use it when several independent tasks must all succeed. It waits for every input, returns results in input order, and rejects as soon as one input rejects. It does not cancel the remaining tasks.</p>
+        <pre><code>const [profile, settings] = await Promise.all([
+  getProfile(),
+  getSettings()
+]);</code></pre>
+        <div class="grid"><article class="card"><h3>Best for</h3><p>Independent requests where a missing result means the whole operation cannot continue.</p></article><article class="card"><h3>Watch out</h3><p>Do not pass function references. Call them: <code>Promise.all([getProfile(), getSettings()])</code>.</p></article></div>
+        <div class="demo"><h3>Run it: finish together, preserve order</h3><p>The fast task finishes first, but the result array keeps the order you supplied.</p><button data-demo="all">Run example</button><div class="output" id="output-all">Waiting for a run...</div></div>
+      </section>
+
+      <section id="race">
+        <div class="section-head"><span class="number">04</span><h2><code>Promise.race</code></h2></div>
+        <p class="lead">Use it when the first task to settle wins. “Settle” includes both fulfillment and rejection, so a fast failure can win the race. Losing work is not automatically cancelled.</p>
+        <pre><code>const result = await Promise.race([
+  fetchData(),
+  timeout(3000)
+]);</code></pre>
+        <div class="callout"><strong>Classic use case</strong>Race a network request against a timeout. For real cancellation, pair the request with <code>AbortController</code>.</div>
+        <div class="demo"><h3>Run it: the fastest settlement wins</h3><p>Two timers start together. The 500 ms timer wins.</p><button data-demo="race">Run example</button><div class="output" id="output-race">Waiting for a run...</div></div>
+      </section>
+
+      <section id="constructor">
+        <div class="section-head"><span class="number">05</span><h2><code>new Promise</code></h2></div>
+        <p class="lead">The Promise constructor is mainly a bridge for callback-style APIs. Its executor runs immediately and receives <code>resolve</code> and <code>reject</code> functions.</p>
+        <pre><code>function wait(ms) {
+  return new Promise((resolve) =&gt; {
+    setTimeout(() =&gt; resolve(`Waited ${ms} ms`), ms);
+  });
+}
+
+wait(400).then(console.log);</code></pre>
+        <div class="callout"><strong>Rule of thumb</strong>Do not wrap an API that already returns a Promise. Create a new Promise when you need to adapt callbacks or control an external completion event.</div>
+      </section>
+
+      <section id="callback">
+        <div class="section-head"><span class="number">06</span><h2>Callback</h2></div>
+        <p class="lead">A callback is a function passed to another function so it can be invoked later. Callbacks can be synchronous, like <code>array.map()</code>, or asynchronous, like a timer callback.</p>
+        <pre><code>function getOrder(callback) {
+  setTimeout(() =&gt; {
+    callback(null, { item: "Coffee", ready: true });
+  }, 400);
+}
+
+getOrder((error, order) =&gt; {
+  if (error) return console.error(error);
+  console.log(order);
+});</code></pre>
+        <div class="grid"><article class="card"><h3>Strength</h3><p>Simple APIs and direct control over what happens after an operation finishes.</p></article><article class="card"><h3>Cost</h3><p>Many dependent callbacks can create nested code and scattered error handling. Promises make composition easier.</p></article></div>
+      </section>
+
+      <section id="choose">
+        <div class="section-head"><span class="number">07</span><h2>Choose the right tool</h2></div>
+        <table class="comparison">
+          <thead><tr><th>Tool</th><th>Use it when</th><th>Core behavior</th></tr></thead>
+          <tbody>
+            <tr><td><code>callback</code></td><td>An API expects a function to call later.</td><td>The provider controls when the function runs.</td></tr>
+            <tr><td><code>new Promise</code></td><td>You must adapt a callback API.</td><td>Resolve success; reject failure.</td></tr>
+            <tr><td><code>async / await</code></td><td>You want readable sequential async code.</td><td>Async functions return Promises; await unwraps them.</td></tr>
+            <tr><td><code>Promise.all</code></td><td>All independent tasks are required.</td><td>All fulfill or the combined Promise rejects.</td></tr>
+            <tr><td><code>Promise.race</code></td><td>The first completion matters.</td><td>First fulfillment or rejection settles the result.</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <footer class="shell">Research basis: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function" target="_blank" rel="noreferrer">MDN async function</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await" target="_blank" rel="noreferrer">await</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all" target="_blank" rel="noreferrer">Promise.all</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/race" target="_blank" rel="noreferrer">Promise.race</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise" target="_blank" rel="noreferrer">Promise constructor</a>, and <a href="https://developer.mozilla.org/en-US/docs/Glossary/Callback_function" target="_blank" rel="noreferrer">callbacks</a>.</footer>
+
+  <script>
+    const sleep = (ms, value) => new Promise((resolve) => setTimeout(() => resolve(value), ms));
+    const output = (name, text) => { document.querySelector(`#output-${name}`).textContent = text; };
+
+    document.querySelectorAll("button[data-demo]").forEach((button) => {
+      button.addEventListener("click", async () => {
+        const name = button.dataset.demo;
+        button.disabled = true;
+        output(name, "Running...");
+        try {
+          if (name === "async") {
+            async function getMessage() { return "Hello from a Promise"; }
+            const promise = getMessage();
+            output(name, `${promise.constructor.name} received\n${await promise}`);
+          }
+          if (name === "await") {
+            try { await Promise.reject(new Error("503 Service Unavailable")); }
+            catch (error) { output(name, `Caught safely: ${error.message}`); }
+          }
+          if (name === "all") {
+            const values = await Promise.all([sleep(800, "profile"), sleep(250, "settings")]);
+            output(name, `Both complete\n${JSON.stringify(values)}`);
+          }
+          if (name === "race") {
+            const winner = await Promise.race([sleep(900, "slow task"), sleep(500, "fast task")]);
+            output(name, `Winner: ${winner}`);
+          }
+        } finally { button.disabled = false; }
+      });
+    });
+  </script>
+
+
+</body></html>
