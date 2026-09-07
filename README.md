@@ -206,7 +206,6 @@ LearnPlaywright3x/
 │   ├── testutils.js
 │   ├── utils.js
 ├── Chapter_20_Class_Objects_OOPs/
-│   ├── 158_ClassObjects1.js
 ├── PracticePrograms/
 │   ├── 01_HelloWorld.js
 │   ├── 02_TakeInputFromUsers.js
@@ -516,7 +515,6 @@ This section is generated from the current JavaScript files in the workspace. Ru
 
 ### Files covered
 
-- 158_ClassObjects1.js — JavaScript practice example
 
 ## Practice Programs
 
