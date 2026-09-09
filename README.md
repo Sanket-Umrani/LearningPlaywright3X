@@ -206,6 +206,15 @@ LearnPlaywright3x/
 │   ├── testutils.js
 │   ├── utils.js
 ├── Chapter_20_Class_Objects_OOPs/
+├── Chapter_21_OOPs_Encapsulation/
+│   ├── 169_EncapsulationPerson.js
+│   ├── 170_EncapsulationCar.js
+│   ├── 171_EncapsulationBank.js
+│   ├── 172_EncapsulationIQ1.js
+│   ├── 173_EncapsuationIQ2.js
+│   ├── 174_EncapsulationIQ3.js
+│   ├── 175_EncapsulationIQ4.js
+├── Chapter_22_OOPs_Inheritance/
 ├── PracticePrograms/
 │   ├── 01_HelloWorld.js
 │   ├── 02_TakeInputFromUsers.js
@@ -512,6 +521,23 @@ This section is generated from the current JavaScript files in the workspace. Ru
 - utils.js — Looping and iteration examples
 
 ## Chapter 20 — Class Objects OOPs
+
+### Files covered
+
+
+## Chapter 21 — OOPs Encapsulation
+
+### Files covered
+
+- 169_EncapsulationPerson.js — Basic console output example
+- 170_EncapsulationCar.js — Basic console output example
+- 171_EncapsulationBank.js — Conditional branching examples
+- 172_EncapsulationIQ1.js — Array validation and predicate checks
+- 173_EncapsuationIQ2.js — Basic console output example
+- 174_EncapsulationIQ3.js — Basic console output example
+- 175_EncapsulationIQ4.js — Basic console output example
+
+## Chapter 22 — OOPs Inheritance
 
 ### Files covered
 
