@@ -2,14 +2,71 @@
 
 ## Summary
 
-This note summarizes the JavaScript files in Chapter_22_OOPs_Inheritance on 2026-09-09T03:10:08.911Z.
-Files analyzed: 8
+This note summarizes the JavaScript files in Chapter_22_OOPs_Inheritance on 2026-09-09T17:39:35.223Z.
+Files analyzed: 11
+
+## 186_Hierrachial Inheritance.js
+
+### File
+
+- Chapter_22_OOPs_Inheritance/Hierrachial Inheritance/186_Hierrachial Inheritance.js
+
+### Core concept
+
+- JavaScript practice concept
+
+### Key learnings
+
+- The file demonstrates a practical JavaScript concept.
+- The example is useful for interview revision because it highlights a real-world language behavior.
+
+### Interview-style note
+
+- This example is a practical reference for a common JavaScript pattern.
+
+## 185_MultiLevelInheritance.js
+
+### File
+
+- Chapter_22_OOPs_Inheritance/MultiLevel Inheritance/185_MultiLevelInheritance.js
+
+### Core concept
+
+- JavaScript practice concept
+
+### Key learnings
+
+- The file demonstrates a practical JavaScript concept.
+- The example is useful for interview revision because it highlights a real-world language behavior.
+
+### Interview-style note
+
+- This example is a practical reference for a common JavaScript pattern.
 
 ## 183_MultipleInheritance.js
 
 ### File
 
 - Chapter_22_OOPs_Inheritance/Multiple Inheritance/183_MultipleInheritance.js
+
+### Core concept
+
+- JavaScript practice concept
+
+### Key learnings
+
+- The file demonstrates a practical JavaScript concept.
+- The example is useful for interview revision because it highlights a real-world language behavior.
+
+### Interview-style note
+
+- This example is a practical reference for a common JavaScript pattern.
+
+## 184_MultipleInheritance.js
+
+### File
+
+- Chapter_22_OOPs_Inheritance/Multiple Inheritance/184_MultipleInheritance.js
 
 ### Core concept
 

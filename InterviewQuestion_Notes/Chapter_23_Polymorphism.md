@@ -1,15 +1,15 @@
-# Chapter_01_Basics - JavaScript Concept Analysis
+# Chapter_23_Polymorphism - JavaScript Concept Analysis
 
 ## Summary
 
-This note summarizes the JavaScript files in Chapter_01_Basics on 2026-09-09T17:39:34.903Z.
+This note summarizes the JavaScript files in Chapter_23_Polymorphism on 2026-09-09T17:39:35.773Z.
 Files analyzed: 1
 
-## 01_HelloWorld.js
+## 187_MethodOverriding.js
 
 ### File
 
-- Chapter_01_Basics/01_HelloWorld.js
+- Chapter_23_Polymorphism/187_MethodOverriding.js
 
 ### Core concept
 

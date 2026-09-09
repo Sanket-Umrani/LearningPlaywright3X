@@ -7,5 +7,25 @@
   },
   "dependencies": {
     "prompt-sync": "^4.2.0"
-  }
+  },
+  "name": "learningplaywright3x",
+  "version": "1.0.0",
+  "description": "JavaScript Fundamentals & Automation Learning Repo",
+  "main": "auto-push-agent.js",
+  "devDependencies": {
+    "tsx": "^4.23.13",
+    "typescript": "^7.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sanket-Umrani/LearningPlaywright3X.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Sanket-Umrani/LearningPlaywright3X/issues"
+  },
+  "homepage": "https://github.com/Sanket-Umrani/LearningPlaywright3X#readme"
 }

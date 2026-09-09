@@ -2,14 +2,14 @@
 
 ## Summary
 
-This note summarizes modified and untracked JavaScript files in the workspace on 2026-09-09T03:10:08.197Z.
-Files analyzed: 15
+This note summarizes modified and untracked JavaScript files in the workspace on 2026-09-09T17:39:34.887Z.
+Files analyzed: 12
 
-## 169_EncapsulationPerson.js
+## 186_Hierrachial Inheritance.js
 
 ### File
 
-- Chapter_21_OOPs_Encapsulation/169_EncapsulationPerson.js
+- Chapter_22_OOPs_Inheritance/Hierrachial Inheritance/186_Hierrachial Inheritance.js
 
 ### Core concept
 
@@ -24,11 +24,11 @@ Files analyzed: 15
 
 - This example is a practical reference for a common JavaScript pattern.
 
-## 170_EncapsulationCar.js
+## 185_MultiLevelInheritance.js
 
 ### File
 
-- Chapter_21_OOPs_Encapsulation/170_EncapsulationCar.js
+- Chapter_22_OOPs_Inheritance/MultiLevel Inheritance/185_MultiLevelInheritance.js
 
 ### Core concept
 
@@ -43,11 +43,11 @@ Files analyzed: 15
 
 - This example is a practical reference for a common JavaScript pattern.
 
-## 171_EncapsulationBank.js
+## 184_MultipleInheritance.js
 
 ### File
 
-- Chapter_21_OOPs_Encapsulation/171_EncapsulationBank.js
+- Chapter_22_OOPs_Inheritance/Multiple Inheritance/184_MultipleInheritance.js
 
 ### Core concept
 
@@ -62,11 +62,49 @@ Files analyzed: 15
 
 - This example is a practical reference for a common JavaScript pattern.
 
-## 172_EncapsulationIQ1.js
+## 187_MethodOverriding.js
 
 ### File
 
-- Chapter_21_OOPs_Encapsulation/172_EncapsulationIQ1.js
+- Chapter_23_Polymorphism/187_MethodOverriding.js
+
+### Core concept
+
+- JavaScript practice concept
+
+### Key learnings
+
+- The file demonstrates a practical JavaScript concept.
+- The example is useful for interview revision because it highlights a real-world language behavior.
+
+### Interview-style note
+
+- This example is a practical reference for a common JavaScript pattern.
+
+## 188_InterviewQuestions1.js
+
+### File
+
+- Chapter_24_OOPs_InterviewQuestions/188_InterviewQuestions1.js
+
+### Core concept
+
+- JavaScript practice concept
+
+### Key learnings
+
+- The file demonstrates a practical JavaScript concept.
+- The example is useful for interview revision because it highlights a real-world language behavior.
+
+### Interview-style note
+
+- This example is a practical reference for a common JavaScript pattern.
+
+## 189_InterviewQuestion2.js
+
+### File
+
+- Chapter_24_OOPs_InterviewQuestions/189_InterviewQuestion2.js
 
 ### Core concept
 
@@ -82,11 +120,11 @@ Files analyzed: 15
 
 - A good interview answer is that default parameters secure missing inputs while rest parameters handle unknown argument counts.
 
-## 173_EncapsuationIQ2.js
+## 190_InterviewQuestion3.js
 
 ### File
 
-- Chapter_21_OOPs_Encapsulation/173_EncapsuationIQ2.js
+- Chapter_24_OOPs_InterviewQuestions/190_InterviewQuestion3.js
 
 ### Core concept
 
@@ -101,11 +139,11 @@ Files analyzed: 15
 
 - This example is a practical reference for a common JavaScript pattern.
 
-## 174_EncapsulationIQ3.js
+## 191_InterviewQuestion4.js
 
 ### File
 
-- Chapter_21_OOPs_Encapsulation/174_EncapsulationIQ3.js
+- Chapter_24_OOPs_InterviewQuestions/191_InterviewQuestion4.js
 
 ### Core concept
 
@@ -121,11 +159,11 @@ Files analyzed: 15
 
 - A good interview answer is that default parameters secure missing inputs while rest parameters handle unknown argument counts.
 
-## 175_EncapsulationIQ4.js
+## 192_InterviewQuestion5.js
 
 ### File
 
-- Chapter_21_OOPs_Encapsulation/175_EncapsulationIQ4.js
+- Chapter_24_OOPs_InterviewQuestions/192_InterviewQuestion5.js
 
 ### Core concept
 
@@ -140,11 +178,11 @@ Files analyzed: 15
 
 - This example is a practical reference for a common JavaScript pattern.
 
-## 183_MultipleInheritance.js
+## 193_JSWithoutDataType1.js
 
 ### File
 
-- Chapter_22_OOPs_Inheritance/Multiple Inheritance/183_MultipleInheritance.js
+- Chapter_25_TypeScript/193_JSWithoutDataType1.js
 
 ### Core concept
 
@@ -159,11 +197,11 @@ Files analyzed: 15
 
 - This example is a practical reference for a common JavaScript pattern.
 
-## 176_Single_Inheritance.js
+## 194_TypeScriptWithDataType1.js
 
 ### File
 
-- Chapter_22_OOPs_Inheritance/Single Inheritance/176_Single_Inheritance.js
+- Chapter_25_TypeScript/194_TypeScriptWithDataType1.js
 
 ### Core concept
 
@@ -178,106 +216,11 @@ Files analyzed: 15
 
 - This example is a practical reference for a common JavaScript pattern.
 
-## 177_Single_InheritanceSuperKeyword.js
+## 195_TypeScript1.js
 
 ### File
 
-- Chapter_22_OOPs_Inheritance/Single Inheritance/177_Single_InheritanceSuperKeyword.js
-
-### Core concept
-
-- JavaScript practice concept
-
-### Key learnings
-
-- The file demonstrates a practical JavaScript concept.
-- The example is useful for interview revision because it highlights a real-world language behavior.
-
-### Interview-style note
-
-- This example is a practical reference for a common JavaScript pattern.
-
-## 178_SingleInheritanceIQ1.js
-
-### File
-
-- Chapter_22_OOPs_Inheritance/Single Inheritance/178_SingleInheritanceIQ1.js
-
-### Core concept
-
-- JavaScript practice concept
-
-### Key learnings
-
-- The file demonstrates a practical JavaScript concept.
-- The example is useful for interview revision because it highlights a real-world language behavior.
-
-### Interview-style note
-
-- This example is a practical reference for a common JavaScript pattern.
-
-## 179_SingleInheratanceIQ2.js
-
-### File
-
-- Chapter_22_OOPs_Inheritance/Single Inheritance/179_SingleInheratanceIQ2.js
-
-### Core concept
-
-- JavaScript practice concept
-
-### Key learnings
-
-- The file demonstrates a practical JavaScript concept.
-- The example is useful for interview revision because it highlights a real-world language behavior.
-
-### Interview-style note
-
-- This example is a practical reference for a common JavaScript pattern.
-
-## 180_SingleInheritanceIQ3.js
-
-### File
-
-- Chapter_22_OOPs_Inheritance/Single Inheritance/180_SingleInheritanceIQ3.js
-
-### Core concept
-
-- JavaScript practice concept
-
-### Key learnings
-
-- The file demonstrates a practical JavaScript concept.
-- The example is useful for interview revision because it highlights a real-world language behavior.
-
-### Interview-style note
-
-- This example is a practical reference for a common JavaScript pattern.
-
-## 181_SingleInheritanceIQ4.js
-
-### File
-
-- Chapter_22_OOPs_Inheritance/Single Inheritance/181_SingleInheritanceIQ4.js
-
-### Core concept
-
-- JavaScript practice concept
-
-### Key learnings
-
-- The file demonstrates a practical JavaScript concept.
-- The example is useful for interview revision because it highlights a real-world language behavior.
-
-### Interview-style note
-
-- This example is a practical reference for a common JavaScript pattern.
-
-## 182_SingleInheritanceIQ5.js
-
-### File
-
-- Chapter_22_OOPs_Inheritance/Single Inheritance/182_SingleInheritanceIQ5.js
+- Chapter_25_TypeScript/195_TypeScript1.js
 
 ### Core concept
 

@@ -215,6 +215,18 @@ LearnPlaywright3x/
 │   ├── 174_EncapsulationIQ3.js
 │   ├── 175_EncapsulationIQ4.js
 ├── Chapter_22_OOPs_Inheritance/
+├── Chapter_23_Polymorphism/
+│   ├── 187_MethodOverriding.js
+├── Chapter_24_OOPs_InterviewQuestions/
+│   ├── 188_InterviewQuestions1.js
+│   ├── 189_InterviewQuestion2.js
+│   ├── 190_InterviewQuestion3.js
+│   ├── 191_InterviewQuestion4.js
+│   ├── 192_InterviewQuestion5.js
+├── Chapter_25_TypeScript/
+│   ├── 193_JSWithoutDataType1.js
+│   ├── 194_TypeScriptWithDataType1.js
+│   ├── 195_TypeScript1.js
 ├── PracticePrograms/
 │   ├── 01_HelloWorld.js
 │   ├── 02_TakeInputFromUsers.js
@@ -541,6 +553,30 @@ This section is generated from the current JavaScript files in the workspace. Ru
 
 ### Files covered
 
+
+## Chapter 23 — Polymorphism
+
+### Files covered
+
+- 187_MethodOverriding.js — Looping and iteration examples
+
+## Chapter 24 — OOPs InterviewQuestions
+
+### Files covered
+
+- 188_InterviewQuestions1.js — Basic console output example
+- 189_InterviewQuestion2.js — Basic console output example
+- 190_InterviewQuestion3.js — Basic console output example
+- 191_InterviewQuestion4.js — Basic console output example
+- 192_InterviewQuestion5.js — Basic console output example
+
+## Chapter 25 — TypeScript
+
+### Files covered
+
+- 193_JSWithoutDataType1.js — JavaScript practice example
+- 194_TypeScriptWithDataType1.js — Basic console output example
+- 195_TypeScript1.js — Basic console output example
 
 ## Practice Programs
 
