@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Shell(node auto-push-agent.js)",
+      "Shell(kill:*)"
+    ],
+    "deny": [],
+    "defaultMode": "default"
+  }
+}
