@@ -8,3 +8,4 @@ function getFailedCodes(codes: number[]): number[] {
 
 console.log("All Codes", responseCode);
 console.log("Failed Codes", getFailedCodes(responseCode));
+//This is a TypeScript Examples

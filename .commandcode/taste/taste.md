@@ -1,7 +1,7 @@
-# Taste (Continuously Learned by [CommandCode][cmd])
+# Taste
 
-[cmd]: https://commandcode.ai/
+## Workflow & Tooling
 
-- Communicates with minimal explanation — gives direct commands and expects the assistant to infer context from the IDE state. Confidence: 0.5
-- Prefers to offload routine git commit/push work to an automated agent script (`auto-push-agent.js`) rather than issuing manual git commands. Confidence: 0.6
-
+- Prefers incremental, minimally-invasive edits over full regeneration: when a tool/script updates a file (e.g. README sync), only touch the entries that actually changed and leave all other existing content byte-for-byte untouched. Confidence: 0.6
+- Wants repo maintenance tasks exposed as reusable, ongoing tooling (e.g. an npm script invoked via command) that keeps working for future updates rather than being fixed once for the current state. Confidence: 0.6
+- Prefers modifying existing files in place over creating new ones: expects already-present files (e.g. README.md) to be edited, and questions the creation of new files when a suitable one exists. Confidence: 0.7

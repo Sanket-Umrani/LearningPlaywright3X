@@ -227,6 +227,7 @@ LearnPlaywright3x/
 │   ├── 193_JSWithoutDataType1.js
 │   ├── 194_TypeScriptWithDataType1.js
 │   ├── 195_TypeScript1.js
+│   ├── 205_TypeScript11.ts
 ├── PracticePrograms/
 │   ├── 01_HelloWorld.js
 │   ├── 02_TakeInputFromUsers.js
@@ -577,6 +578,7 @@ This section is generated from the current JavaScript files in the workspace. Ru
 - 193_JSWithoutDataType1.js — JavaScript practice example
 - 194_TypeScriptWithDataType1.js — Basic console output example
 - 195_TypeScript1.js — Basic console output example
+- 205_TypeScript11.ts — Basic console output example
 
 ## Practice Programs
 
