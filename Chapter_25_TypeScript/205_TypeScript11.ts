@@ -8,4 +8,19 @@ function getFailedCodes(codes: number[]): number[] {
 
 console.log("All Codes", responseCode);
 console.log("Failed Codes", getFailedCodes(responseCode));
-//This is a TypeScript Examples will be used hereinafter with datatype inserted
+
+/**
+ * filter() goes through every element and asks:
+
+Should I keep this element?
+Here call back is 
+
+{
+    return codes.filter(function (code: number): boolean {
+        return code >= 400;
+    });
+    takes one code and returns either:
+
+true  → keep it
+false → don't keep it
+ */
