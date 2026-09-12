@@ -1,6 +1,6 @@
 # Taste
 - Prefers incremental, minimally-invasive edits over full regeneration: when a tool/script updates a file (e.g. README sync), only touch the entries that actually changed and leave all other existing content byte-for-byte untouched. Confidence: 0.6
-- Wants repo maintenance tasks exposed as reusable, ongoing tooling (e.g. an npm script invoked via command) that keeps working for future updates rather than being fixed once for the current state. Confidence: 0.6
+- Wants repo maintenance tasks exposed as reusable, ongoing tooling (e.g. an npm script invoked via command, like `npm run readme:sync`) that keeps working for future updates rather than being fixed once for the current state. Confidence: 0.7
 - Prefers modifying existing files in place over creating new ones: expects already-present files (e.g. README.md) to be edited, and questions the creation of new files when a suitable one exists. Confidence: 0.7
 - Wants a review-then-commit-then-push git flow: inspect status/diffs first, then commit and push the current branch to its existing origin remote, and report back the commit hash and push result. Confidence: 0.65
 - Hard git safety rules: never force-push, and never reset, checkout, or discard changes; keep commits scoped to the related changes and leave unrelated files untouched. Confidence: 0.8

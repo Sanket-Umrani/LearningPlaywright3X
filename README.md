@@ -228,6 +228,12 @@ LearnPlaywright3x/
 │   ├── 194_TypeScriptWithDataType1.js
 │   ├── 195_TypeScript1.js
 │   ├── 205_TypeScript11.ts
+├── Chapter_26_OOPsTS_Abstraction/
+│   ├── 211_Interface_Hook.ts
+│   ├── 212_Real_TestConfig.ts
+│   ├── 213_ClassCallingInterface.ts
+│   ├── 214_InterfaceMiscellaneous.ts
+│   ├── 215_Parametrized_Constructor.ts
 ├── PracticePrograms/
 │   ├── 01_HelloWorld.js
 │   ├── 02_TakeInputFromUsers.js
@@ -579,6 +585,16 @@ This section is generated from the current JavaScript files in the workspace. Ru
 - 194_TypeScriptWithDataType1.js — Basic console output example
 - 195_TypeScript1.js — Basic console output example
 - 205_TypeScript11.ts — Array validation and predicate checks
+
+## Chapter 26 — OOPsTS Abstraction
+
+### Files covered
+
+- 211_Interface_Hook.ts — Looping and iteration examples
+- 212_Real_TestConfig.ts — Basic console output example
+- 213_ClassCallingInterface.ts — Basic console output example
+- 214_InterfaceMiscellaneous.ts — JavaScript practice example
+- 215_Parametrized_Constructor.ts — Basic console output example
 
 ## Practice Programs
 
